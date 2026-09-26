@@ -1,0 +1,22 @@
+# Bilingual-pair consistency record for fleet.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write docs/subsystems/fleet.md
+/fleet-composition:
+  en: 210a23cc18de8039
+  zh: b815271b25ae4dc2
+/fleet-composition/channels:
+  en: 3d39926caa097826
+  zh: 419c11ee6624731d
+/fleet-composition/invariants:
+  en: aa90d58df2381285
+  zh: acce4489c335fdc7
+/fleet-composition/composition-layers:
+  en: 7fb5a08c8cfc0072
+  zh: 62bad87b401b0828
+/fleet-composition/deliberate-removals:
+  en: da08e724cf091da1
+  zh: bfdf814e7896c5e3
+/fleet-composition/where-the-rows-come-from:
+  en: 4f2eaf5ec59caede
+  zh: 0f82a37d4f8b021a

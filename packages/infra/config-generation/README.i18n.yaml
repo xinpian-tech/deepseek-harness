@@ -1,0 +1,73 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/infra/config-generation/README.md
+/:
+  en: 8676abea4e688413
+  zh: 320817b27933c2a3
+/dsh-fleet-config-generation:
+  en: 07b85da2cf55f2f3
+  zh: 74f7695810dd1fa5
+/dsh-fleet-config-generation/summary:
+  en: 6e5c23f09b715ff7
+  zh: 00757afa535ed952
+/dsh-fleet-config-generation/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/dsh-fleet-config-generation/use-this-package:
+  en: c8bc5e10120ec791
+  zh: 8595cb90517555ab
+/dsh-fleet-config-generation/use-this-package/when-to-use-it:
+  en: 81d3f7e0d389b367
+  zh: dd90ada26bc61256
+/dsh-fleet-config-generation/use-this-package/configuration:
+  en: 1b3369745065238f
+  zh: 21c207d3109c2c9b
+/dsh-fleet-config-generation/use-this-package/flake-resolution:
+  en: 300defc9fc51cc54
+  zh: 7be786b0cb4d50b4
+/dsh-fleet-config-generation/use-this-package/the-record:
+  en: 7963c9c8d89a4b70
+  zh: ac5d760001c36d11
+/dsh-fleet-config-generation/use-this-package/digest:
+  en: 56d28fe580bd9ed8
+  zh: 477b42fc038814f2
+/dsh-fleet-config-generation/use-this-package/session-record:
+  en: c9277d524c64dda5
+  zh: 5907c8cda0e49a11
+/dsh-fleet-config-generation/use-this-package/failures-and-recovery:
+  en: f41997ab0d816a73
+  zh: 02c20fc306ade3fb
+/dsh-fleet-config-generation/understand-the-implementation:
+  en: 42b15ac6321706aa
+  zh: 7ae097f3abcc5d9c
+/dsh-fleet-config-generation/understand-the-implementation/design-concept:
+  en: 11e94c14dd27cc11
+  zh: 09b964fab8f97a9e
+/dsh-fleet-config-generation/understand-the-implementation/source-map:
+  en: e963d02501658ea9
+  zh: 209f7c408e765bc6
+/dsh-fleet-config-generation/further-exploration:
+  en: 3bd83f3c3d603b62
+  zh: 1230f4b25d8cb5b5
+/dsh-fleet-config-generation/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/dsh-fleet-config-generation/model-experience/version-fingerprint-registration:
+  en: d5c00fe441a93872
+  zh: a09f011bf46d4a2f
+/dsh-fleet-config-generation/model-experience/version-fingerprint-registration/what-the-model-sees:
+  en: 92a574f553bcdfdd
+  zh: e6d1051c58dbbbf0
+/dsh-fleet-config-generation/model-experience/version-fingerprint-registration/token-effect:
+  en: 5b83ac7ce1ea1346
+  zh: 46f65ccddd9d3ff1
+/dsh-fleet-config-generation/model-experience/version-fingerprint-registration/kv-cache-effect:
+  en: 2efdcedd694acbb6
+  zh: 53feceaf1d56b8ac
+/dsh-fleet-config-generation/known-limitations-and-deferred-work:
+  en: d7b4b85c7dc35829
+  zh: 7d68db7e676261e9
+/dsh-fleet-config-generation/known-limitations-and-deferred-work/dev-note:
+  en: 6f43e608ce9ff951
+  zh: cbf58f34517338ef

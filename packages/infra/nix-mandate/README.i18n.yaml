@@ -1,0 +1,88 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/infra/nix-mandate/README.md
+/:
+  en: ad72069704ae219a
+  zh: 1cf38e4f7d660abb
+/dsh-fleet-nix-mandate:
+  en: 9ee1a11aa205ab23
+  zh: 2aa2c827c2490c27
+/dsh-fleet-nix-mandate/summary:
+  en: f0a897c3920fd3d9
+  zh: da399ac63eeb4b71
+/dsh-fleet-nix-mandate/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/dsh-fleet-nix-mandate/use-this-package:
+  en: 9544aa33492de2c8
+  zh: 9b49ea7a4a6a90dc
+/dsh-fleet-nix-mandate/use-this-package/when-to-choose-it:
+  en: 6ac7ba622d47a13b
+  zh: 0958cb89ca9339d1
+/dsh-fleet-nix-mandate/use-this-package/minimal-configuration:
+  en: 065c3cef7cf52515
+  zh: 0f0e1ff7b2fba43b
+/dsh-fleet-nix-mandate/use-this-package/why-the-order-is-a-number:
+  en: 5e449c073b170d19
+  zh: 97a91f301d1a3be7
+/dsh-fleet-nix-mandate/use-this-package/what-the-file-write-does:
+  en: ab7d2ccf6d6c455e
+  zh: 033b80b575ad5f44
+/dsh-fleet-nix-mandate/understand-the-implementation:
+  en: 42b15ac6321706aa
+  zh: c5500056b41ce570
+/dsh-fleet-nix-mandate/understand-the-implementation/design-concept:
+  en: c38997f9b06a0aa4
+  zh: 17ba59852d1a9bff
+/dsh-fleet-nix-mandate/understand-the-implementation/source-map:
+  en: c1050260e761af6d
+  zh: 5b6c3edf62c86ab0
+/dsh-fleet-nix-mandate/understand-the-implementation/session-flow:
+  en: ace8b0eb3f0f3d07
+  zh: 9be7a225316d37a6
+/dsh-fleet-nix-mandate/understand-the-implementation/region-semantics:
+  en: dfea23652e88651f
+  zh: b53252713bd27884
+/dsh-fleet-nix-mandate/further-exploration:
+  en: c4d8296ffb1d83d8
+  zh: f7ab4b39e7b45df5
+/dsh-fleet-nix-mandate/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/dsh-fleet-nix-mandate/model-experience/nix-rule-system-prompt-section:
+  en: 988ef7e339ad6e07
+  zh: edf9d874df9396ae
+/dsh-fleet-nix-mandate/model-experience/nix-rule-system-prompt-section/what-the-model-sees:
+  en: 0026701696418363
+  zh: fed4651a802c86d0
+/dsh-fleet-nix-mandate/model-experience/nix-rule-system-prompt-section/what-the-model-sees/rule-section-text:
+  en: 1f00ff52a2beb1b2
+  zh: 475e0a87d8b1f4d7
+/dsh-fleet-nix-mandate/model-experience/nix-rule-system-prompt-section/token-effect:
+  en: 7eb9906f7df10ba3
+  zh: 6df3cef1dac32836
+/dsh-fleet-nix-mandate/model-experience/nix-rule-system-prompt-section/kv-cache-effect:
+  en: 3aa172173bc9f6d3
+  zh: 15119b810b9a5eaf
+/dsh-fleet-nix-mandate/model-experience/workspace-instruction-block:
+  en: 747706f2344153dc
+  zh: 0ea0f071e90815bd
+/dsh-fleet-nix-mandate/model-experience/workspace-instruction-block/what-the-model-sees:
+  en: 2dcb0cef724a78b0
+  zh: 3999f5e206709734
+/dsh-fleet-nix-mandate/model-experience/workspace-instruction-block/what-the-model-sees/instruction-file-block:
+  en: d5caf269dd4e9138
+  zh: 0bb1cb093482e0dc
+/dsh-fleet-nix-mandate/model-experience/workspace-instruction-block/token-effect:
+  en: b209d7d1db02f2ed
+  zh: 7f8fbe56aaa958c7
+/dsh-fleet-nix-mandate/model-experience/workspace-instruction-block/kv-cache-effect:
+  en: 54e8e079bdbf1c91
+  zh: f1e3e393c9d663a5
+/dsh-fleet-nix-mandate/known-limitations-and-deferred-work:
+  en: dfce51cb032a48f6
+  zh: 7018ed1844679803
+/dsh-fleet-nix-mandate/known-limitations-and-deferred-work/dev-note:
+  en: 35b85e457e30baff
+  zh: 938520d8dcb6df6b

@@ -1,0 +1,73 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/infra/git-checkpoint/README.md
+/:
+  en: 672832243b3a27e9
+  zh: 18c48487039ed1fe
+/dsh-fleet-git-checkpoint:
+  en: ee14ab71fd0dfbc4
+  zh: 6a098b58bc87ed1b
+/dsh-fleet-git-checkpoint/summary:
+  en: 385c306ff3467124
+  zh: 1c82d35d7e1c01bf
+/dsh-fleet-git-checkpoint/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/dsh-fleet-git-checkpoint/use-this-package:
+  en: d7e7392572afe559
+  zh: 12c26e81d621e55c
+/dsh-fleet-git-checkpoint/use-this-package/when-to-choose-it:
+  en: a68a855c24b90401
+  zh: fde96ec8377cdd6d
+/dsh-fleet-git-checkpoint/use-this-package/configuration:
+  en: 7083ed68756a66e8
+  zh: 38e2bf8e2e8f1b6b
+/dsh-fleet-git-checkpoint/use-this-package/what-you-get:
+  en: ff9a7ac391c3212a
+  zh: b260de15a1bd26a0
+/dsh-fleet-git-checkpoint/use-this-package/the-queue-file:
+  en: f1411da59fdbb417
+  zh: 2e82854b515c76e9
+/dsh-fleet-git-checkpoint/use-this-package/failure-and-recovery:
+  en: fa64bc2889d620eb
+  zh: 6e72f07cf7c8e8cc
+/dsh-fleet-git-checkpoint/understand-the-implementation:
+  en: 5de2122ffa60f2b0
+  zh: beb9ce890a8be8e7
+/dsh-fleet-git-checkpoint/understand-the-implementation/design-concept:
+  en: 30bf51aa2977f8c7
+  zh: 033784c93e7f9c66
+/dsh-fleet-git-checkpoint/understand-the-implementation/source-map:
+  en: 2e5ca5e1bf8d449f
+  zh: 5da8ba7c19031280
+/dsh-fleet-git-checkpoint/understand-the-implementation/phase-1:
+  en: 741e9520f4b77cb7
+  zh: 286abccd87700c5d
+/dsh-fleet-git-checkpoint/understand-the-implementation/phase-2:
+  en: e2c9675e7ae085e9
+  zh: fc1072e43c6572f8
+/dsh-fleet-git-checkpoint/further-exploration:
+  en: 2b29d9bd2a64f922
+  zh: f412106d3853373d
+/dsh-fleet-git-checkpoint/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/dsh-fleet-git-checkpoint/model-experience/turn-checkpointing:
+  en: c37efb9bbad118bb
+  zh: 7f85103283e1a345
+/dsh-fleet-git-checkpoint/model-experience/turn-checkpointing/what-the-model-sees:
+  en: 9687f9413cd6b0ab
+  zh: 4aaaffc44970d0c2
+/dsh-fleet-git-checkpoint/model-experience/turn-checkpointing/token-effect:
+  en: 5b83ac7ce1ea1346
+  zh: f991f49314fa7f27
+/dsh-fleet-git-checkpoint/model-experience/turn-checkpointing/kv-cache-effect:
+  en: 9df7450518f9f1bd
+  zh: 6183256480c4b012
+/dsh-fleet-git-checkpoint/known-limitations-and-deferred-work:
+  en: 00f4ae93842d4c7b
+  zh: aee146bf74d6a087
+/dsh-fleet-git-checkpoint/known-limitations-and-deferred-work/dev-note:
+  en: 91f11224504e58c7
+  zh: 154130eae274bd8c

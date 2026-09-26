@@ -1,0 +1,55 @@
+{
+  "name": "@dsh-fleet/bundle",
+  "description": "Fleet profile bundle: the tmux-only composition and the message-passing removals required by infra-requirements.dsh.md",
+  "version": "0.1.7-rc.2",
+  "private": true,
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./no-messaging.cordis.patch.yml": "./no-messaging.cordis.patch.yml",
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": [
+        "./no-messaging.cordis.patch.yml",
+        "./cordis.patch.yml"
+      ]
+    }
+  },
+  "dependencies": {
+    "@dsh-fleet/config-generation": "workspace:*",
+    "@dsh-fleet/git-checkpoint": "workspace:*",
+    "@dsh-fleet/ledger": "workspace:*",
+    "@dsh-fleet/machine-registry": "workspace:*",
+    "@dsh-fleet/nix-mandate": "workspace:*",
+    "@dsh-fleet/nix-sandbox": "workspace:*",
+    "@dsh-fleet/nix-shell": "workspace:*",
+    "@dsh-fleet/prompt-source": "workspace:*",
+    "@dsh-fleet/session-archive": "workspace:*",
+    "@dsh-fleet/subagent-tmux": "workspace:*",
+    "@dsh-fleet/task-spec": "workspace:*",
+    "@dsh-fleet/tmux": "workspace:*",
+    "@dsh-fleet/tmux-gateway": "workspace:*",
+    "@dsh-fleet/worker-template": "workspace:*",
+    "@dsh-fleet/worktree": "workspace:*"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "workspace:~"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "workspace:~",
+    "@deepseek-ai/cordis-plugin-include": "workspace:~",
+    "@deepseek-ai/cordis-plugin-loader": "workspace:~",
+    "@types/js-yaml": "^4.0.9",
+    "js-yaml": "^4.2.0"
+  }
+}

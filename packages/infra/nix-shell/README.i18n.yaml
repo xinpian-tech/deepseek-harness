@@ -1,0 +1,70 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/infra/nix-shell/README.md
+/:
+  en: f5267dbe14234f5c
+  zh: c9b8891e109f66be
+/dsh-fleet-nix-shell:
+  en: 2e3f08fa144368d5
+  zh: 1547a30ef324bebb
+/dsh-fleet-nix-shell/summary:
+  en: c5b12201b85b5b2e
+  zh: 9841e6e6f6d98f90
+/dsh-fleet-nix-shell/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/dsh-fleet-nix-shell/use-this-package:
+  en: 4b70fd62649a7718
+  zh: dd0ce8db93653982
+/dsh-fleet-nix-shell/use-this-package/when-to-use-it:
+  en: 420ff4a35edff1ed
+  zh: c69d6da99c6d9e3a
+/dsh-fleet-nix-shell/use-this-package/configuration:
+  en: f92242b8a1f1f1b1
+  zh: 4323e3f4f0af5a12
+/dsh-fleet-nix-shell/use-this-package/what-a-command-sees:
+  en: 9397436a940863e3
+  zh: 3bcf8a0469750b07
+/dsh-fleet-nix-shell/use-this-package/failures-and-recovery:
+  en: 6dbdf9b64e1f2501
+  zh: 4db0107232d76c5a
+/dsh-fleet-nix-shell/understand-the-implementation:
+  en: 42b15ac6321706aa
+  zh: c5500056b41ce570
+/dsh-fleet-nix-shell/understand-the-implementation/design-concept:
+  en: e4cc44a41e7a02f4
+  zh: 10c98e2e78746548
+/dsh-fleet-nix-shell/understand-the-implementation/source-map:
+  en: 7c2539f8e89311a4
+  zh: e188291622a2f374
+/dsh-fleet-nix-shell/understand-the-implementation/command-rewriting:
+  en: 9f2c86c9a820a007
+  zh: bcdc75073abf6c0d
+/dsh-fleet-nix-shell/understand-the-implementation/what-the-base-executor-still-owns:
+  en: d7710863a35d9f05
+  zh: abd5a6e396750ac9
+/dsh-fleet-nix-shell/further-exploration:
+  en: 67d9db56f6ec13e3
+  zh: ab626df85dd4693a
+/dsh-fleet-nix-shell/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/dsh-fleet-nix-shell/model-experience/bash-tool-calls:
+  en: a92f0f71f1903b18
+  zh: 253a923f4be08419
+/dsh-fleet-nix-shell/model-experience/bash-tool-calls/what-the-model-sees:
+  en: 7f6f15099c7b7527
+  zh: 560d6549ebe28ae9
+/dsh-fleet-nix-shell/model-experience/bash-tool-calls/token-effect:
+  en: bbfe8ef323b1be9a
+  zh: 7831b7b88c3fe738
+/dsh-fleet-nix-shell/model-experience/bash-tool-calls/kv-cache-effect:
+  en: 90e86f73825f909e
+  zh: 27f18bbf38e31fdc
+/dsh-fleet-nix-shell/known-limitations-and-deferred-work:
+  en: 64d13fa0fc10af80
+  zh: 765e16e2b2d788af
+/dsh-fleet-nix-shell/known-limitations-and-deferred-work/dev-note:
+  en: 1e810a2aafa7a920
+  zh: 6a64dbd2e0ddfdc2

@@ -1,0 +1,75 @@
+# Removal layer (infra-requirements.dsh.md §12). R-7 admits only call-return
+# semantics between agents, so every row that delivers a message into another
+# agent's context is switched off here rather than deleted upstream (R-0).
+#
+# A patch that matches nothing warns and is skipped, so the provider rows below
+# stay listed even when a profile does not mount them: the same removal layer
+# must hold for every base-backed fleet profile.
+
+# --- Delegation providers that are not tmux panes -------------------------
+# spawn and fork create same-process children; the four stdio providers drive a
+# child over a pipe. Neither is a pane, so neither is a channel (§3, §5.3).
+- id: subagent-spawn-in-process
+  disabled: true
+
+- id: subagent-fork-in-process
+  disabled: true
+
+- id: subagent-codex
+  disabled: true
+
+- id: subagent-claude-code
+  disabled: true
+
+- id: subagent-acp
+  disabled: true
+
+- id: subagent-dsh-sdk
+  disabled: true
+
+# --- Message-passing tools ------------------------------------------------
+# send_message / interrupt_agent publish into a child's inbox without that
+# child asking: asynchronous delivery, which R-7 forbids. `interrupt` survives
+# as a tmux signal on the pane the caller itself opened (§11 item 13).
+- id: tool-subagent-control
+  disabled: true
+
+# Lists continuable children; with continuable delegation off the list is empty.
+- id: tool-subagent-list-agents
+  disabled: true
+
+# --- Task-group plugin ----------------------------------------------------
+# Roster, task board and mailbox are all dsh-internal messaging.
+- id: agent-team
+  disabled: true
+
+# --- Delegation tools repointed at the tmux provider ----------------------
+# The tools stay (they are call-return: the caller starts a child and receives
+# its result), but they may only resolve the tmux provider.
+# `maxDepth: provider-managed` is required, not cosmetic: a numeric cap is
+# enforced by the child runtime, and the tmux provider has no way to carry one
+# across the pane boundary, so the tool refuses to mount without this.
+- id: tool-subagent
+  config:
+    provider: tmux
+    toolName: subagent
+    maxDepth: provider-managed
+    # Continuable children resume through an inbox delivery, so they are off;
+    # a fleet worker continues by being called again on its resident pane.
+    backgroundMode: one-shot
+
+- id: tool-subagent-fork
+  config:
+    provider: tmux
+    toolName: subagent_fork
+    maxDepth: provider-managed
+    backgroundMode: one-shot
+
+- id: workflow-ptc
+  config:
+    provider: tmux
+
+# Ralph drives the same subagent seam for every round.
+- id: tool-ralph
+  config:
+    subagentProvider: tmux

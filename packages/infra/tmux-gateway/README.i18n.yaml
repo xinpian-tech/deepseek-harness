@@ -1,0 +1,73 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/infra/tmux-gateway/README.md
+/:
+  en: 703dece77a162733
+  zh: 598a467fdabd764c
+/dsh-fleet-tmux-gateway:
+  en: 50cc76f64ac691cd
+  zh: b34eba5c54a32fa3
+/dsh-fleet-tmux-gateway/summary:
+  en: 0219885c9b07d1a8
+  zh: 9a88e4a286e56704
+/dsh-fleet-tmux-gateway/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/dsh-fleet-tmux-gateway/use-this-package:
+  en: 92a0110604690623
+  zh: abcbe421907d1642
+/dsh-fleet-tmux-gateway/use-this-package/when-to-choose-it:
+  en: 43b7e3f428cdfdf7
+  zh: a7e358a2bf2c8091
+/dsh-fleet-tmux-gateway/use-this-package/minimal-configuration:
+  en: a35832baab240c31
+  zh: 8c8a0e5ff8d3b266
+/dsh-fleet-tmux-gateway/use-this-package/serving-and-dialing:
+  en: e5b7f4c56d356066
+  zh: 1cdea87e6f5d10a3
+/dsh-fleet-tmux-gateway/use-this-package/the-trust-boundary:
+  en: 96ad461dd5de3b1c
+  zh: 96f080d71d490d47
+/dsh-fleet-tmux-gateway/use-this-package/failures-and-recovery:
+  en: 2fee0a2d5e7489d6
+  zh: 3dea2b4517add499
+/dsh-fleet-tmux-gateway/understand-the-implementation:
+  en: 42b15ac6321706aa
+  zh: c5500056b41ce570
+/dsh-fleet-tmux-gateway/understand-the-implementation/design-concept:
+  en: 5fa156a9fbaa5db8
+  zh: 289901070ebca778
+/dsh-fleet-tmux-gateway/understand-the-implementation/source-map:
+  en: e59a34d6716bb281
+  zh: 9a0474c60e440f01
+/dsh-fleet-tmux-gateway/understand-the-implementation/listener-lifecycle:
+  en: 6d830e9b50768a69
+  zh: 8434ca3c128878ec
+/dsh-fleet-tmux-gateway/understand-the-implementation/connection-handling:
+  en: 0873e867a4f5845a
+  zh: eda66367e60bc3e6
+/dsh-fleet-tmux-gateway/further-exploration:
+  en: b641047311a579d4
+  zh: e038430ce67cfa12
+/dsh-fleet-tmux-gateway/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/dsh-fleet-tmux-gateway/model-experience/cross-machine-bridge:
+  en: 2c1504cf46d6f5d2
+  zh: f3e7e88cc6759959
+/dsh-fleet-tmux-gateway/model-experience/cross-machine-bridge/what-the-model-sees:
+  en: 0259325cdba1bab5
+  zh: 60b5fd294ca42792
+/dsh-fleet-tmux-gateway/model-experience/cross-machine-bridge/token-effect:
+  en: 91a882eeec7b6af2
+  zh: 6fc09a45c96820a8
+/dsh-fleet-tmux-gateway/model-experience/cross-machine-bridge/kv-cache-effect:
+  en: e8eb0563dc2d2224
+  zh: 842bf0f94c3b8752
+/dsh-fleet-tmux-gateway/known-limitations-and-deferred-work:
+  en: d06d4d2efd825ab0
+  zh: b8c7f15270f1919a
+/dsh-fleet-tmux-gateway/known-limitations-and-deferred-work/dev-note:
+  en: 0d1b1edf47e321dd
+  zh: d9db131eda1ea839

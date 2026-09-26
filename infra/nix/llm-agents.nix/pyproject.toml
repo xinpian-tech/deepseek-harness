@@ -1,0 +1,68 @@
+[project]
+name = "llm-agents-nix"
+version = "0.1.0"
+description = "Nix package updater library and tools"
+requires-python = ">=3.13"
+
+[tool.mypy]
+python_version = "3.13"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_any_unimported = false
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+check_untyped_defs = true
+strict_equality = true
+strict_optional = true
+# Treat each update.py as a separate script, not a module
+explicit_package_bases = true
+namespace_packages = true
+# Add module paths so imports resolve correctly
+mypy_path = "scripts:.github/ci"
+
+[[tool.mypy.overrides]]
+module = "elftools.*"
+ignore_missing_imports = true
+
+[tool.ruff]
+target-version = "py313"
+line-length = 88
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+  "E501",   # line too long (handled by formatter)
+  "D203",   # incompatible with D211
+  "D213",   # incompatible with D212
+  "S603",   # subprocess without shell=True is safe with controlled inputs
+  "S607",
+  "S310",
+  "T201",   # print statements are acceptable in update scripts
+  "EXE003", # nix shebang is valid
+  "EXE005", # nix multi-line shebang is valid
+  "COM812", # conflicts with formatter
+  "CPY",    # no copyright header requirement
+]
+
+[tool.ruff.lint.per-file-ignores]
+".github/ci/lib.py" = [
+  "INP001",
+] # shared module for standalone CI scripts, not a package
+"*_test.py" = [
+  "D101",   # test classes are self-documenting
+  "D102",   # test methods are self-documenting
+  "D103",   # test helper functions are self-documenting
+  "D107",   # test helper __init__ needs no docstring
+  "ANN401", # test doubles legitimately use Any (*args/**kwargs recorders)
+  "PT009",  # we use stdlib unittest assertions on purpose (zero-dep, extractable)
+  "PT027",  # ditto: unittest assertRaises, not pytest.raises
+  "S101",   # asserts are the point in tests
+]
+
+[tool.ruff.lint.pylint]
+max-args = 8     # Allow more arguments for updater classes
+max-returns = 10

@@ -1,0 +1,67 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/infra/worker-template/README.md
+/:
+  en: d3961961620242f5
+  zh: 79f5cf62bddd2d75
+/dsh-fleet-worker-template:
+  en: b0226b965b5eb9e0
+  zh: fc299cbebd320732
+/dsh-fleet-worker-template/summary:
+  en: 889bbf580ca0a734
+  zh: d0deb384d0f9faf1
+/dsh-fleet-worker-template/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/dsh-fleet-worker-template/use-this-package:
+  en: 2b62fe82003e2df7
+  zh: e30bea86018ea2d8
+/dsh-fleet-worker-template/use-this-package/when-to-use-it:
+  en: ba0b75639396043f
+  zh: e7d687fdb68a1e86
+/dsh-fleet-worker-template/use-this-package/configuration:
+  en: e74f37f0789ba3c8
+  zh: 87457d4eedd33e66
+/dsh-fleet-worker-template/use-this-package/what-you-get:
+  en: ce6d51a40ce27364
+  zh: a8ced5dc1111d38f
+/dsh-fleet-worker-template/use-this-package/failures-and-recovery:
+  en: b75a9964ce11d3d0
+  zh: 30091ac97aefcb4e
+/dsh-fleet-worker-template/understand-the-implementation:
+  en: 42b15ac6321706aa
+  zh: c5500056b41ce570
+/dsh-fleet-worker-template/understand-the-implementation/design-concept:
+  en: 93a61fe3d9cf2696
+  zh: 74ef0deb130ef711
+/dsh-fleet-worker-template/understand-the-implementation/source-map:
+  en: 446a0b7b77ca45bf
+  zh: 33f8880ad62c0eeb
+/dsh-fleet-worker-template/understand-the-implementation/the-launch-sequence:
+  en: 5f4406ae49809408
+  zh: 070d6a56577e2ae6
+/dsh-fleet-worker-template/further-exploration:
+  en: 52eb097a40c222e7
+  zh: 752d9c8aa7c25fa5
+/dsh-fleet-worker-template/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/dsh-fleet-worker-template/model-experience/worker-launch:
+  en: 2e9f130333373668
+  zh: da9aa96571d5c0ae
+/dsh-fleet-worker-template/model-experience/worker-launch/what-the-model-sees:
+  en: 23f7ed9022af63c0
+  zh: 686e15524b949281
+/dsh-fleet-worker-template/model-experience/worker-launch/token-effect:
+  en: 90186a940af21216
+  zh: 8990515d567dbce9
+/dsh-fleet-worker-template/model-experience/worker-launch/kv-cache-effect:
+  en: 1cb40182731fcd32
+  zh: 2074f8e175b4aaad
+/dsh-fleet-worker-template/known-limitations-and-deferred-work:
+  en: 0234652fecfdffa9
+  zh: 2e97bc2e2da35684
+/dsh-fleet-worker-template/known-limitations-and-deferred-work/dev-note:
+  en: e8a60c795673897f
+  zh: db8e8c0d45c66116

@@ -1,0 +1,70 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/infra/ledger/README.md
+/:
+  en: 7852e75688e9a8da
+  zh: 54fd5a6c31f34085
+/dsh-fleet-ledger:
+  en: 88bc0c0a49efbf70
+  zh: 9336f2fb7caa8848
+/dsh-fleet-ledger/summary:
+  en: d84525d2de9b9cba
+  zh: 1fc6ebae5d90810a
+/dsh-fleet-ledger/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/dsh-fleet-ledger/use-this-package:
+  en: d906dfa08f45aae3
+  zh: 4e2adb4077d1608b
+/dsh-fleet-ledger/use-this-package/configuration:
+  en: f431b6308957b727
+  zh: 44bd63ec5abfe843
+/dsh-fleet-ledger/use-this-package/what-you-get:
+  en: 4be6c4c614f62380
+  zh: 1ab88438dc5ae5ef
+/dsh-fleet-ledger/use-this-package/scoring-authority:
+  en: 24f4578039d91ab6
+  zh: bf109fe12c8dd045
+/dsh-fleet-ledger/use-this-package/failure-and-recovery:
+  en: 5d9e33876d25e28e
+  zh: 5ad7a0ae16df5e1f
+/dsh-fleet-ledger/understand-the-implementation:
+  en: 42b15ac6321706aa
+  zh: c5500056b41ce570
+/dsh-fleet-ledger/understand-the-implementation/design-concept:
+  en: 9a609eef48fba5d5
+  zh: 58fce07b0c331bc1
+/dsh-fleet-ledger/understand-the-implementation/source-map:
+  en: 0069c142bdcdd2c5
+  zh: 43a53410f1169171
+/dsh-fleet-ledger/understand-the-implementation/durable-document:
+  en: 0f163be4c38ddc20
+  zh: d28341be7a868950
+/dsh-fleet-ledger/understand-the-implementation/load-order:
+  en: 481e89ca5cc0cb4a
+  zh: 3384aac5cfd81007
+/dsh-fleet-ledger/further-exploration:
+  en: 3e1e170d6b8a0f75
+  zh: 3e5cf83d4b71203b
+/dsh-fleet-ledger/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/dsh-fleet-ledger/model-experience/ledger-bookkeeping:
+  en: 2189e2848193321d
+  zh: 14dce18c8121fa7f
+/dsh-fleet-ledger/model-experience/ledger-bookkeeping/what-the-model-sees:
+  en: 18fc327d5e74af80
+  zh: 040594d8719358f4
+/dsh-fleet-ledger/model-experience/ledger-bookkeeping/token-effect:
+  en: 5b83ac7ce1ea1346
+  zh: 581f6d28490b9931
+/dsh-fleet-ledger/model-experience/ledger-bookkeeping/kv-cache-effect:
+  en: 8b6c7ef1a906ee5b
+  zh: 0b858fbe04625118
+/dsh-fleet-ledger/known-limitations-and-deferred-work:
+  en: f6d7b16fe9a41c7b
+  zh: 7b2a6cfa73f5a3e0
+/dsh-fleet-ledger/known-limitations-and-deferred-work/dev-note:
+  en: 0a9fbe00c247852f
+  zh: 4812c3ef2d1cd9b8

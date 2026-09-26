@@ -1,0 +1,67 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/infra/prompt-source/README.md
+/:
+  en: 485249dfd7907120
+  zh: fa7d845ebe01a6fb
+/dsh-fleet-prompt-source:
+  en: fda619623d734bc1
+  zh: c96c7d9239fa8dd9
+/dsh-fleet-prompt-source/summary:
+  en: 2e11c61a46109a3e
+  zh: 047dcefa2f0bc0d3
+/dsh-fleet-prompt-source/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/dsh-fleet-prompt-source/use-this-package:
+  en: 17c09d219be6b714
+  zh: 5c5039e2d0a73e75
+/dsh-fleet-prompt-source/use-this-package/when-to-use-it:
+  en: cac893198375847e
+  zh: 777e8a18269a12bb
+/dsh-fleet-prompt-source/use-this-package/configuration:
+  en: 59b9605e05e67841
+  zh: 5fa2494f83674be9
+/dsh-fleet-prompt-source/use-this-package/what-you-get:
+  en: eab95f133e88f395
+  zh: 74935785cda8902e
+/dsh-fleet-prompt-source/use-this-package/failures-and-recovery:
+  en: a83fd926c4ca9c60
+  zh: 6710b4106b51759a
+/dsh-fleet-prompt-source/understand-the-implementation:
+  en: 42b15ac6321706aa
+  zh: c5500056b41ce570
+/dsh-fleet-prompt-source/understand-the-implementation/design-concept:
+  en: 5242a8546aba3996
+  zh: b0ec73497d47bc07
+/dsh-fleet-prompt-source/understand-the-implementation/source-map:
+  en: 0f9569731d68c705
+  zh: 9f0c5654a70358fd
+/dsh-fleet-prompt-source/understand-the-implementation/the-extension-point-this-package-uses:
+  en: 54e902bc9dc7cf3d
+  zh: 83e7712bb2a0e4d2
+/dsh-fleet-prompt-source/further-exploration:
+  en: d4de23bfec63bc9a
+  zh: d39b9e8fcfd089ce
+/dsh-fleet-prompt-source/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/dsh-fleet-prompt-source/model-experience/prompt-attribution:
+  en: b05d65190d14cacf
+  zh: ac90ef24687b0baa
+/dsh-fleet-prompt-source/model-experience/prompt-attribution/what-the-model-sees:
+  en: 9d90dae53e2af9cd
+  zh: a64c7d2d99870579
+/dsh-fleet-prompt-source/model-experience/prompt-attribution/token-effect:
+  en: 5b83ac7ce1ea1346
+  zh: f991f49314fa7f27
+/dsh-fleet-prompt-source/model-experience/prompt-attribution/kv-cache-effect:
+  en: 7697ff84e489b579
+  zh: 82236d1027307620
+/dsh-fleet-prompt-source/known-limitations-and-deferred-work:
+  en: c2811c6a7b2bbfc6
+  zh: 3cc39797433aa681
+/dsh-fleet-prompt-source/known-limitations-and-deferred-work/dev-note:
+  en: db39e257c890270d
+  zh: 6e23bb39447ec4f3

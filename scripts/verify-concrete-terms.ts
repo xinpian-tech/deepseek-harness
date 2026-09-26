@@ -8,7 +8,10 @@ import { historicalSchemaRegion } from './historical-schema-region.ts'
 
 const root = resolve(import.meta.dirname, '..')
 const blockedTerm = 'prove' + 'nance'
-const excludedPrefixes = ['vendor/', '.agents/notes/archived/'] as const
+// `infra/nix/llm-agents.nix/` is a vendored upstream copy (see
+// infra/nix/vendor.json), so its prose is read exactly like `vendor/`: the
+// fleet does not rewrite another project's wording to satisfy this gate.
+const excludedPrefixes = ['vendor/', 'infra/nix/llm-agents.nix/', '.agents/notes/archived/'] as const
 
 /** One blocked term occurrence in a tracked path or text line. */
 export interface ConcreteTermViolation {

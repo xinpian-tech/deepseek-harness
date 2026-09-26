@@ -1,0 +1,7 @@
+{
+  "version": "0.161.1",
+  "x86_64-linux": "sha256-oUVcujjfZ2osNAilPw5nQCV5xj4ArXk9cMboHhG9E9k=",
+  "aarch64-linux": "sha256-jEWK9eSXHWSwBgaCka8xrt707r0ZUaQF9xGcqVw5ZtE=",
+  "aarch64-darwin": "sha256-uMiIMEH1oQ65kKBT72OTYYdMrhIk8P+i70Qj+gRDfCA=",
+  "jar": "sha256-UaSdkBc1Nw+jPJ03EpEc7fh57E0oi247j8jb2ElKhQM="
+}

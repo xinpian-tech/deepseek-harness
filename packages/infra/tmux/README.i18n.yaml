@@ -1,0 +1,76 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/infra/tmux/README.md
+/:
+  en: 97bcbf96ecec59c1
+  zh: def8ddee91360bcf
+/dsh-fleet-tmux:
+  en: 4b73d52d96d2bba8
+  zh: e38a074a9fb34a02
+/dsh-fleet-tmux/summary:
+  en: 2cf958fa8be3c1b7
+  zh: fb6df06cdb36ae12
+/dsh-fleet-tmux/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/dsh-fleet-tmux/use-this-package:
+  en: 443603c14fe4f46b
+  zh: 9a670c580801854b
+/dsh-fleet-tmux/use-this-package/when-to-choose-it:
+  en: d578f43a47b24453
+  zh: 27d5b617cfecd4e2
+/dsh-fleet-tmux/use-this-package/minimal-configuration:
+  en: fa713053c717035e
+  zh: 08e5e1b807570e68
+/dsh-fleet-tmux/use-this-package/what-you-get:
+  en: 5e2a3f187d67dbec
+  zh: 481c625ecd643584
+/dsh-fleet-tmux/use-this-package/the-completion-rule:
+  en: e8a75e6ab1e13671
+  zh: 2fae16b75af94439
+/dsh-fleet-tmux/use-this-package/failures-and-recovery:
+  en: b71a215d9fc4f5a2
+  zh: 8c18e937272ee5b7
+/dsh-fleet-tmux/understand-the-implementation:
+  en: 42b15ac6321706aa
+  zh: c5500056b41ce570
+/dsh-fleet-tmux/understand-the-implementation/design-concept:
+  en: d7a45478e6883290
+  zh: a8152db6ae2eaffd
+/dsh-fleet-tmux/understand-the-implementation/source-map:
+  en: 18f41ed01f3c0ef0
+  zh: a8ab252fa7ffd47d
+/dsh-fleet-tmux/understand-the-implementation/framing-rules:
+  en: 05ee380ec5b335f3
+  zh: 5240194b0fb705a1
+/dsh-fleet-tmux/understand-the-implementation/frames-in:
+  en: 0e025a259242174c
+  zh: bfc0817e5c21a5a1
+/dsh-fleet-tmux/understand-the-implementation/interrupt-delivery:
+  en: 6408dcb8ccd8f478
+  zh: f0f97c180c883973
+/dsh-fleet-tmux/further-exploration:
+  en: a78d681a9e6e34c9
+  zh: 7fa8066f4208645d
+/dsh-fleet-tmux/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/dsh-fleet-tmux/model-experience/delegation-channel:
+  en: 61a81dde844e1655
+  zh: 41dafe8c9def1354
+/dsh-fleet-tmux/model-experience/delegation-channel/what-the-model-sees:
+  en: 0dbb8177b8af022e
+  zh: d524f2918eae5121
+/dsh-fleet-tmux/model-experience/delegation-channel/token-effect:
+  en: 9cc5fdedbba5ef79
+  zh: 7500b3f6c1bf53bc
+/dsh-fleet-tmux/model-experience/delegation-channel/kv-cache-effect:
+  en: ae91209d356a07ff
+  zh: 9eb9f9f6b12abdf2
+/dsh-fleet-tmux/known-limitations-and-deferred-work:
+  en: 9f5e040ddb5b890a
+  zh: cfe01f3a50276243
+/dsh-fleet-tmux/known-limitations-and-deferred-work/dev-note:
+  en: 36f4a897f255579f
+  zh: c208600489bd0edb

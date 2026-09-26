@@ -1,0 +1,70 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/infra/subagent-tmux/README.md
+/:
+  en: 3e73fa31a0a83766
+  zh: a97ff0d21c08f8f6
+/dsh-fleet-subagent-tmux:
+  en: bec61ab3f5e0add3
+  zh: 2b75b50f5ca431e1
+/dsh-fleet-subagent-tmux/summary:
+  en: bb6dd6e900f5ff49
+  zh: 4a5601fe605745e9
+/dsh-fleet-subagent-tmux/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/dsh-fleet-subagent-tmux/use-this-package:
+  en: 83eafd009264da28
+  zh: 290b882246b641c5
+/dsh-fleet-subagent-tmux/use-this-package/when-to-choose-it:
+  en: 065caf39d12c20cd
+  zh: 06a688621c0d5010
+/dsh-fleet-subagent-tmux/use-this-package/minimal-configuration:
+  en: 9ff717ee6034905e
+  zh: 32228a1c0c81350a
+/dsh-fleet-subagent-tmux/use-this-package/fresh-and-resident:
+  en: 55ab18a822bb9051
+  zh: 52babfc23df4475d
+/dsh-fleet-subagent-tmux/use-this-package/results-and-failures:
+  en: 8ee52cdeedfb430c
+  zh: bc4a8d937df37da9
+/dsh-fleet-subagent-tmux/understand-the-implementation:
+  en: 42b15ac6321706aa
+  zh: c5500056b41ce570
+/dsh-fleet-subagent-tmux/understand-the-implementation/design-concept:
+  en: a838245b942381a4
+  zh: 48e2dd161ca5d793
+/dsh-fleet-subagent-tmux/understand-the-implementation/source-map:
+  en: 790d4fa96f0130d2
+  zh: 7be46c4fa8a75211
+/dsh-fleet-subagent-tmux/understand-the-implementation/one-start-frame-by-frame:
+  en: 6451a29bd42f43f5
+  zh: f48fce7634ad072d
+/dsh-fleet-subagent-tmux/understand-the-implementation/route-handling:
+  en: 184aa54d83a6f259
+  zh: 1a95418334b85c99
+/dsh-fleet-subagent-tmux/further-exploration:
+  en: 4d3a9628f774a404
+  zh: 543aad55a74bff86
+/dsh-fleet-subagent-tmux/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/dsh-fleet-subagent-tmux/model-experience/delegated-child-runs:
+  en: c0331f76e1dd6ca7
+  zh: a3cd3455d2b93545
+/dsh-fleet-subagent-tmux/model-experience/delegated-child-runs/what-the-model-sees:
+  en: 5d25d77174a764b1
+  zh: 8992371864f7d7c9
+/dsh-fleet-subagent-tmux/model-experience/delegated-child-runs/token-effect:
+  en: c3a9935dcdd1fbcc
+  zh: cbc32c58c221cf6e
+/dsh-fleet-subagent-tmux/model-experience/delegated-child-runs/kv-cache-effect:
+  en: 28345d5c7b40819c
+  zh: 29c6cc1d59715920
+/dsh-fleet-subagent-tmux/known-limitations-and-deferred-work:
+  en: ae1bc69a994991b9
+  zh: 43fba52499786b81
+/dsh-fleet-subagent-tmux/known-limitations-and-deferred-work/dev-note:
+  en: f4fdc483fd2814ef
+  zh: 3f515f94a2c94827

@@ -1,0 +1,70 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/infra/task-spec/README.md
+/:
+  en: d6c6b10eb3883d8e
+  zh: e078774d9a95c0b8
+/dsh-fleet-task-spec:
+  en: 2adc0e56d6f12865
+  zh: ac10542b49511ae0
+/dsh-fleet-task-spec/summary:
+  en: 80260761233222b7
+  zh: 06cbb62b35651190
+/dsh-fleet-task-spec/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/dsh-fleet-task-spec/use-this-package:
+  en: 60cfecacf872ee41
+  zh: 0bc6f56a367649d2
+/dsh-fleet-task-spec/use-this-package/when-to-choose-it:
+  en: f93c7dc7b5545c1c
+  zh: 31953b750deb343d
+/dsh-fleet-task-spec/use-this-package/minimal-configuration:
+  en: 8410043feb9a5f53
+  zh: ff4d1cd5dfac297c
+/dsh-fleet-task-spec/use-this-package/the-nix-acceptance-template:
+  en: 9bb24e190b8ee6ad
+  zh: 41a9a8834b853ab9
+/dsh-fleet-task-spec/use-this-package/the-three-consequences-this-vocabulary-exists-for:
+  en: f47f477eee34089f
+  zh: b28561960bc7acab
+/dsh-fleet-task-spec/use-this-package/what-the-service-does:
+  en: bc1d10938884b19d
+  zh: 01e92cc7e8b800a4
+/dsh-fleet-task-spec/understand-the-implementation:
+  en: 42b15ac6321706aa
+  zh: c5500056b41ce570
+/dsh-fleet-task-spec/understand-the-implementation/sources:
+  en: 2d01d62fc8d33825
+  zh: ffc5ebcd8c15129c
+/dsh-fleet-task-spec/understand-the-implementation/how-criteria-and-results-reach-the-durable-log:
+  en: b3d93e58c43a2309
+  zh: 48db430a977e8ed6
+/dsh-fleet-task-spec/understand-the-implementation/deciding-a-criterion:
+  en: d6d215f7f19ef2b6
+  zh: 445f652816df6282
+/dsh-fleet-task-spec/further-exploration:
+  en: 4f309d484949cb4a
+  zh: 9add9e8a38958d15
+/dsh-fleet-task-spec/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/dsh-fleet-task-spec/model-experience/child-session-task-bootstrap:
+  en: f5d8db3815cbea60
+  zh: 4b06579a324ab0dd
+/dsh-fleet-task-spec/model-experience/child-session-task-bootstrap/what-the-model-sees:
+  en: 0dab097380d827b4
+  zh: caf2956a644400f0
+/dsh-fleet-task-spec/model-experience/child-session-task-bootstrap/token-effect:
+  en: 96bbe56f212ad9f2
+  zh: 2dcc7ec2da99ac2c
+/dsh-fleet-task-spec/model-experience/child-session-task-bootstrap/kv-cache-effect:
+  en: b920d96306c2d0e5
+  zh: fee70df9f014718f
+/dsh-fleet-task-spec/known-limitations-and-deferred-work:
+  en: d55313f5f6f8fa6c
+  zh: c0f8c180c740358e
+/dsh-fleet-task-spec/known-limitations-and-deferred-work/dev-note:
+  en: 2bfcf102a44f990d
+  zh: 7880201baf385a65

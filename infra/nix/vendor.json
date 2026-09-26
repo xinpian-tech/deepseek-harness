@@ -1,0 +1,9 @@
+{
+  "url": "github:numtide/llm-agents.nix",
+  "rev": "65270b324e9a42aa10be157ca20e8f3db8839048",
+  "narHash": "sha256-24n3/yPQBO8octZaiJMtRqqeJOI3RHzerUZNIZp9Nk4=",
+  "lastModified": 1790330085,
+  "vendorPath": "infra/nix/llm-agents.nix",
+  "nixpkgsRev": "34ca302a9572963c02e385c056be37c85ff51b77",
+  "note": "Production fleets pin an exact revision: dsh is a developer preview, so tracking the upstream default branch would import every upstream refactor into 100 machines. infra/scripts/vendor-llm-agents.sh replaces this copy wholesale."
+}

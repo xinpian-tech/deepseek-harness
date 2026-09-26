@@ -1,0 +1,20 @@
+{
+  "version": "0.157.0",
+  "hash": "sha256-/f/k77vnFjPfnnf+X2E7rY2FxUR1xAcJZiPTv9Q8JVI=",
+  "cargoHash": "sha256-Mp4chq9QuQB19FrOZBhmUtPrDoEpZZna79+MZs9rGUo=",
+  "librusty_v8": {
+    "version": "150.4.0",
+    "profile": "ptrcomp_sandbox_release",
+    "baseUrl": "https://github.com/openai/codex/releases/download/rusty-v8-v150.4.0",
+    "hashes": {
+      "x86_64-linux": "sha256-o1x10fJuapg4haRbM0kKTr5U8FBQVosyuJz7QhswtYM=",
+      "aarch64-linux": "sha256-0VF+7UBUaFNwKbAF1f6ZfsdNXI01H5FrOm3yC30oEbo=",
+      "aarch64-darwin": "sha256-AK27SHmISMd1UEQcaGc6XoUpuOG3PqvN7iMss5tA9KE="
+    },
+    "srcBindingHashes": {
+      "x86_64-linux": "sha256-dyeCauR5vbZF6Acjn7EtH44uI956bPFvXuWSaQ0dhQY=",
+      "aarch64-linux": "sha256-dyeCauR5vbZF6Acjn7EtH44uI956bPFvXuWSaQ0dhQY=",
+      "aarch64-darwin": "sha256-ylrfDPicmnCtRgrnNkiy/om3SqETs8t/dXtqArdYOU8="
+    }
+  }
+}

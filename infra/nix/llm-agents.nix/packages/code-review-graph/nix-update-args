@@ -1,0 +1,5 @@
+# Upstream also tags VS Code extension releases (vscode-vX.Y.Z); only
+# accept plain Python backend tags like v2.3.5 (or v2.2.3.1).
+--use-github-releases
+--version-regex
+^v([0-9]+(?:\.[0-9]+)+)$

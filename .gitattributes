@@ -13,3 +13,9 @@ docs/persistence-schema.json linguist-generated=true
 docs/persistence-changes/*.schema.json linguist-generated=true
 docs/persistence-changes/releases/*.schema.json linguist-generated=true
 docs/persistence-changes/historical-formats/*.schema.json linguist-generated=true
+
+# The vendored harness flake is upstream source, byte-identical to the pin
+# recorded in infra/nix/vendor.json; its patch files and Go sources carry
+# trailing whitespace that is not ours to rewrite, so `git diff --check` leaves
+# them alone. Everything the fleet authors is still policed.
+infra/nix/llm-agents.nix/** -whitespace

@@ -1,0 +1,73 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/infra/session-archive/README.md
+/:
+  en: 065bd39d13d91384
+  zh: 3fffed2edd8c2669
+/dsh-fleet-session-archive:
+  en: 48ceb54610216105
+  zh: 41f893eb4c631272
+/dsh-fleet-session-archive/summary:
+  en: 1c2e4dabb0563b90
+  zh: 1d95dfdd66966034
+/dsh-fleet-session-archive/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/dsh-fleet-session-archive/use-this-package:
+  en: dd79c0e20431cda0
+  zh: 4fc6c69002caa227
+/dsh-fleet-session-archive/use-this-package/when-to-choose-it:
+  en: 97a0dcada2d6568b
+  zh: 7b0a84ccd4573726
+/dsh-fleet-session-archive/use-this-package/configuration:
+  en: d4f7aa4098cad51f
+  zh: d6dbe15e98028444
+/dsh-fleet-session-archive/use-this-package/what-you-get:
+  en: 3c48a268c446f7ca
+  zh: 0c1f366f072a255d
+/dsh-fleet-session-archive/use-this-package/why-the-refs-are-sharded:
+  en: 06c6951b9edc762b
+  zh: d33f9f1c7e6e121d
+/dsh-fleet-session-archive/use-this-package/failure-and-recovery:
+  en: 0bfd58d188474d53
+  zh: 5bee604c28cedcec
+/dsh-fleet-session-archive/understand-the-implementation:
+  en: 9103d7edc21f1cda
+  zh: a0305ddbde6c2f92
+/dsh-fleet-session-archive/understand-the-implementation/design-concept:
+  en: 31dcede1996e728c
+  zh: 868acb6b32ee44e5
+/dsh-fleet-session-archive/understand-the-implementation/source-map:
+  en: 9e325076661465ba
+  zh: df39f47a58b23544
+/dsh-fleet-session-archive/understand-the-implementation/archive-flow:
+  en: 9f012036fd500ebf
+  zh: 08586faa45fa0709
+/dsh-fleet-session-archive/understand-the-implementation/session-ids-in-paths-and-refs:
+  en: faf3d5c341600d09
+  zh: 1e7f1c3615479ac0
+/dsh-fleet-session-archive/further-exploration:
+  en: d65791b3703403cf
+  zh: bd756b11624adf5c
+/dsh-fleet-session-archive/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/dsh-fleet-session-archive/model-experience/session-archival:
+  en: abf6509b77c4be08
+  zh: 72370e05e849e92e
+/dsh-fleet-session-archive/model-experience/session-archival/what-the-model-sees:
+  en: 885096ca8811d428
+  zh: d27897f545174811
+/dsh-fleet-session-archive/model-experience/session-archival/token-effect:
+  en: 5b83ac7ce1ea1346
+  zh: f991f49314fa7f27
+/dsh-fleet-session-archive/model-experience/session-archival/kv-cache-effect:
+  en: ed35df9cd8d92fc4
+  zh: 39df70d89befc8fe
+/dsh-fleet-session-archive/known-limitations-and-deferred-work:
+  en: d3e8c97d6e52b832
+  zh: 4f75fbec8429c45f
+/dsh-fleet-session-archive/known-limitations-and-deferred-work/dev-note:
+  en: b5511de2da332c29
+  zh: 8099e9c2fbbfacda

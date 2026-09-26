@@ -1,0 +1,164 @@
+{
+  "version": 1,
+  "note": "Inventory of infra-requirements.dsh.md \u00a711 (change list) and \u00a712 (removal list). infra/nix/fleet.nix refuses a manifest that names a package which does not exist or omits a change id, so this file cannot drift away from the tree.",
+  "changes": [
+    {
+      "id": "change-1",
+      "package": "infra/tmux",
+      "title": "tmux pane management: placement records, the real-time channel and the interrupt path"
+    },
+    {
+      "id": "change-2",
+      "package": "infra/subagent-tmux",
+      "title": "tmux SubagentProvider: pane, NDJSON frames, fresh|resident sessions"
+    },
+    {
+      "id": "change-3",
+      "package": "infra/tmux-gateway",
+      "title": "cross-machine tmux gateway (TCP to tmux unix socket, dynamic port)"
+    },
+    {
+      "id": "change-4",
+      "package": "infra/worker-template",
+      "title": "worker launch template: resident sdk process, stty, credential env passthrough"
+    },
+    {
+      "id": "change-5",
+      "package": "infra/prompt-source",
+      "title": "session/prompt source field: distinguish a leader's instruction from a human message"
+    },
+    {
+      "id": "change-6",
+      "package": "infra/git-checkpoint",
+      "title": "turn-stopping git checkpoint hook plus asynchronous push retry queue"
+    },
+    {
+      "id": "change-7",
+      "package": "infra/session-archive",
+      "title": "per-turn session archiver writing per-machine refs"
+    },
+    {
+      "id": "change-8",
+      "package": "infra/worktree",
+      "title": "worktree management: N candidates as N worktrees and branches"
+    },
+    {
+      "id": "change-9",
+      "package": "infra/ledger",
+      "title": "durable performance ledger keyed by member"
+    },
+    {
+      "id": "change-10",
+      "package": "infra/machine-registry",
+      "title": "machine registry and MachineContext (hostid, alias, nix system)"
+    },
+    {
+      "id": "change-11",
+      "package": "infra/task-spec",
+      "title": "TaskSpec with acceptance as a first-class, machine-checkable field"
+    },
+    {
+      "id": "change-12",
+      "package": "infra/config-generation",
+      "title": "ConfigGeneration record: flake URI, revision, lock hash, store path"
+    },
+    {
+      "id": "change-13",
+      "package": "infra/tmux",
+      "title": "interrupt channel: signal or kill the process in a pane"
+    },
+    {
+      "id": "change-14",
+      "package": "infra/nix-sandbox",
+      "title": "Nix-only sandbox profile: /nix/store read-only, workspace, tmp, no package managers, no network"
+    },
+    {
+      "id": "change-15",
+      "package": "infra/nix-shell",
+      "title": "nix develop -c shell provider: every command runs inside the flake environment"
+    },
+    {
+      "id": "change-16",
+      "package": "infra/nix-mandate",
+      "title": "Nix mandate prompt section at order 700, written together with the workspace AGENTS.md"
+    },
+    {
+      "id": "change-17",
+      "package": "infra/task-spec",
+      "title": "acceptance templates carrying nix flake check / nix build / nix develop -c"
+    }
+  ],
+  "removals": [
+    {
+      "id": "remove-subagent-control",
+      "row": "tool-subagent-control",
+      "patch": "packages/bundle/fleet/no-messaging.cordis.patch.yml",
+      "title": "send_message / interrupt_agent are message passing"
+    },
+    {
+      "id": "remove-subagent-list-agents",
+      "row": "tool-subagent-list-agents",
+      "patch": "packages/bundle/fleet/no-messaging.cordis.patch.yml",
+      "title": "lists continuable children, empty once messaging is gone"
+    },
+    {
+      "id": "remove-spawn-in-process",
+      "row": "subagent-spawn-in-process",
+      "patch": "packages/bundle/fleet/no-messaging.cordis.patch.yml",
+      "title": "same-process children are not in tmux"
+    },
+    {
+      "id": "remove-fork-in-process",
+      "row": "subagent-fork-in-process",
+      "patch": "packages/bundle/fleet/no-messaging.cordis.patch.yml",
+      "title": "same-process children are not in tmux"
+    },
+    {
+      "id": "remove-agent-codex-provider",
+      "row": "subagent-codex",
+      "patch": "packages/bundle/fleet/no-messaging.cordis.patch.yml",
+      "title": "stdio pipe provider, not a tmux pane",
+      "defensive": true,
+      "note": "dsh-base does not mount this row; the disable is a guard for any profile that does. A patch that matches nothing warns and is skipped, which is why the row is listed rather than removed from this layer."
+    },
+    {
+      "id": "remove-agent-claude-code-provider",
+      "row": "subagent-claude-code",
+      "patch": "packages/bundle/fleet/no-messaging.cordis.patch.yml",
+      "title": "stdio pipe provider, not a tmux pane",
+      "defensive": true,
+      "note": "dsh-base does not mount this row; the disable is a guard for any profile that does. A patch that matches nothing warns and is skipped, which is why the row is listed rather than removed from this layer."
+    },
+    {
+      "id": "remove-agent-acp-provider",
+      "row": "subagent-acp",
+      "patch": "packages/bundle/fleet/no-messaging.cordis.patch.yml",
+      "title": "stdio pipe provider, not a tmux pane",
+      "defensive": true,
+      "note": "dsh-base does not mount this row; the disable is a guard for any profile that does. A patch that matches nothing warns and is skipped, which is why the row is listed rather than removed from this layer."
+    },
+    {
+      "id": "remove-agent-dsh-sdk-provider",
+      "row": "subagent-dsh-sdk",
+      "patch": "packages/bundle/fleet/no-messaging.cordis.patch.yml",
+      "title": "stdio pipe provider, not a tmux pane",
+      "defensive": true,
+      "note": "dsh-base does not mount this row; the disable is a guard for any profile that does. A patch that matches nothing warns and is skipped, which is why the row is listed rather than removed from this layer."
+    },
+    {
+      "id": "remove-agent-team",
+      "row": "agent-team",
+      "patch": "packages/bundle/fleet/no-messaging.cordis.patch.yml",
+      "title": "roster, task board and mailbox are dsh-internal messaging",
+      "defensive": true,
+      "note": "dsh-base does not mount this row; the disable is a guard for any profile that does. A patch that matches nothing warns and is skipped, which is why the row is listed rather than removed from this layer."
+    },
+    {
+      "id": "remove-settlement-notification",
+      "row": null,
+      "patch": "packages/bundle/fleet/no-messaging.cordis.patch.yml",
+      "title": "automatic settlement delivery into a parent context is message passing",
+      "note": "No row switches this off: settlement delivery lives in the subagent package\u2019s continuation activation, and it is unreachable once no continuable child can be created \u2014 every provider that could create one is disabled above and the delegation tools run one-shot. The composition test in packages/bundle/fleet asserts the rows that do exist."
+    }
+  ]
+}

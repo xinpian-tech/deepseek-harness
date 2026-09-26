@@ -1,0 +1,96 @@
+# Fleet composition layer (infra-requirements.dsh.md §11). Everything the
+# cluster adds is inserted here as a new row; no upstream row is edited in
+# place other than the two substitutions the requirement calls for (the shell
+# executor, and the sandbox profile it executes under).
+#
+# Load order inside this file is the order the rows appear, and later layers
+# win per row id, so a machine-local `--patch` file can still override any of
+# these rows without touching this one.
+
+- insert:
+    # --- Identity and its recorded fingerprint (§11 items 10, 12) --------
+    # Recorded before anything can execute, because every execution record
+    # quotes both.
+    - id: fleet-config-generation
+      name: '@dsh-fleet/config-generation'
+
+    - id: fleet-machine-registry
+      name: '@dsh-fleet/machine-registry'
+
+    # --- Task contract (§11 items 11, 17) -------------------------------
+    # Acceptance criteria ride with the task as durable data, and the Nix
+    # gates are part of every generated acceptance set (§2.4).
+    - id: fleet-task-spec
+      name: '@dsh-fleet/task-spec'
+
+    # --- Real-time channel (§11 items 1, 2, 3, 4, 13) -------------------
+    # ctx.tmux owns panes, placement records and the interrupt path; the
+    # provider drives workers through it; the gateway exposes it across
+    # machines; the worker template is the launch contract for a pane.
+    - id: fleet-tmux
+      name: '@dsh-fleet/tmux'
+
+    - id: fleet-subagent-tmux
+      name: '@dsh-fleet/subagent-tmux'
+
+    # The bridge is closed by default: exposing one machine's tmux server over
+    # TCP is a deployment decision, and the requirement accepts plaintext only
+    # inside the fleet's controlled boundary. An operator turns it on with a
+    # machine-local `--patch` file that sets `enabled: true`.
+    - id: fleet-tmux-gateway
+      name: '@dsh-fleet/tmux-gateway'
+      config:
+        enabled: false
+        socketPath: !!js "process.env.DSH_FLEET_TMUX_SOCKET ?? `/tmp/tmux-${process.getuid()}/default`"
+
+    - id: fleet-worker-template
+      name: '@dsh-fleet/worker-template'
+
+    # --- Durable channel (§11 items 6, 7, 8, 9) -------------------------
+    - id: fleet-session-archive
+      name: '@dsh-fleet/session-archive'
+
+    - id: fleet-git-checkpoint
+      name: '@dsh-fleet/git-checkpoint'
+
+    - id: fleet-worktree
+      name: '@dsh-fleet/worktree'
+
+    - id: fleet-ledger
+      name: '@dsh-fleet/ledger'
+
+    # --- Audit gap (§11 item 5) -----------------------------------------
+    - id: fleet-prompt-source
+      name: '@dsh-fleet/prompt-source'
+
+    # --- Nix enforcement (§2.2 layers one and three) --------------------
+    - id: fleet-nix-mandate
+      name: '@dsh-fleet/nix-mandate'
+
+
+# Layer one: the process confinement that decides what a command may see. The
+# base mounts the local sandbox provider and one provider per context is
+# allowed, so the fleet profile replaces that row rather than adding beside it.
+- id: sandbox
+  disabled: true
+
+- insert:
+    - id: fleet-nix-sandbox
+      name: '@dsh-fleet/nix-sandbox'
+      config:
+        profileName: nix-only
+        network: false
+
+# Layer two: the executor every shell command runs through. The base mounts
+# its sandboxed bash executor; the fleet replaces that single `ctx.shell`
+# provider with one that runs each command inside `nix develop -c`, so a
+# command that installs a package installs it into a throwaway environment
+# (or fails) instead of onto the machine.
+- id: bash-sandbox
+  disabled: true
+
+- insert:
+    - id: fleet-nix-shell
+      name: '@dsh-fleet/nix-shell'
+      config:
+        timeoutMs: 60000

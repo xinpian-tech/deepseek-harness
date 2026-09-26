@@ -1,0 +1,28 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write infra/README.md
+/infra-nix-as-the-fleet-s-only-dependency-source:
+  en: ec88d2fe12de4fa1
+  zh: 1b67a2cd03797c7f
+/infra-nix-as-the-fleet-s-only-dependency-source/what-nix-enforces:
+  en: 5039caa7fa615df5
+  zh: b320f1ab02d4b4a1
+/infra-nix-as-the-fleet-s-only-dependency-source/commands:
+  en: ddf711d58c24b759
+  zh: 15c2727a9d881560
+/infra-nix-as-the-fleet-s-only-dependency-source/layout:
+  en: 78c14d3cc21e13ce
+  zh: b3e6382fccca1cea
+/infra-nix-as-the-fleet-s-only-dependency-source/vendoring-numtide-llm-agents-nix:
+  en: 419ecb3f8a6c7692
+  zh: 52fcf9f6aace534f
+/infra-nix-as-the-fleet-s-only-dependency-source/generated-artifacts-this-change-maintains:
+  en: 09303e7ee5ec8755
+  zh: 4f001d056aba7e2a
+/infra-nix-as-the-fleet-s-only-dependency-source/the-additive-boundary-r-0:
+  en: 969569141b129cda
+  zh: 02977ff6203a9cbf
+/infra-nix-as-the-fleet-s-only-dependency-source/configgeneration:
+  en: b5e72da637a4fda2
+  zh: 568c609a93c58351

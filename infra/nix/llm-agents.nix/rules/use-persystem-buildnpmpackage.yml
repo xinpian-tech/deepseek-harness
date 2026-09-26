@@ -1,0 +1,9 @@
+id: use-perSystem-buildNpmPackage
+language: nix
+severity: error
+message: >-
+  Do not use `pkgs.buildNpmPackage`. Declare `buildNpmPackage` as a package.nix argument; the in-repo builder adds an eval-time guard that fails fast with a helpful message on nixpkgs older than fetcherVersion = 2 (#4320), instead of a cryptic FOD hash mismatch.
+files:
+  - 'packages/**'
+rule:
+  pattern: pkgs.buildNpmPackage

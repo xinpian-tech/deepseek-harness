@@ -1,0 +1,76 @@
+{
+  lib,
+  buildNpmPackage,
+  fetchurl,
+  mkUpdater,
+  nodejs,
+  runCommand,
+  versionCheckHook,
+  versionCheckHomeHook,
+}:
+
+let
+  versionData = lib.importJSON ./hashes.json;
+  version = versionData.version;
+  # Create a source with package-lock.json included
+  srcWithLock = runCommand "letta-code-src-with-lock" { } ''
+    mkdir -p $out
+    tar -xzf ${
+      fetchurl {
+        url = "https://registry.npmjs.org/@letta-ai/letta-code/-/letta-code-${version}.tgz";
+        hash = versionData.sourceHash;
+      }
+    } -C $out --strip-components=1
+    cp ${./package-lock.json} $out/package-lock.json
+  '';
+in
+buildNpmPackage rec {
+  npmDepsFetcherVersion = 2;
+  inherit nodejs;
+  pname = "letta-code";
+  inherit version;
+
+  src = srcWithLock;
+
+  npmDepsHash = versionData.npmDepsHash;
+
+  npmInstallFlags = [ "--ignore-scripts" ];
+  npmRebuildFlags = [ "--ignore-scripts" ];
+
+  # The package from npm is already built
+  dontNpmBuild = true;
+
+  # Use environment variables to forcefully disable all scripts
+  NPM_CONFIG_IGNORE_SCRIPTS = "true";
+  NPM_CONFIG_LEGACY_PEER_DEPS = "true";
+
+  # patchShebangs will automatically fix the shebang in the installed binary
+  # No need for manual postInstall sed commands
+
+  doInstallCheck = true;
+  nativeInstallCheckInputs = [
+    versionCheckHook
+    versionCheckHomeHook
+  ];
+
+  passthru.category = "AI Coding Agents";
+  passthru.updater = mkUpdater {
+    kind = "npm";
+    purl = "pkg:npm/%40letta-ai/letta-code";
+    lockfileEnv = {
+      NPM_CONFIG_LEGACY_PEER_DEPS = "true";
+    };
+  };
+
+  meta = with lib; {
+    description = "Memory-first coding agent that learns and evolves across sessions";
+    homepage = "https://github.com/letta-ai/letta-code";
+    downloadPage = "https://www.npmjs.com/package/@letta-ai/letta-code";
+    changelog = "https://github.com/letta-ai/letta-code/releases";
+    license = licenses.asl20;
+    sourceProvenance = with sourceTypes; [ binaryBytecode ];
+    maintainers = with maintainers; [ vizid ];
+    mainProgram = "letta";
+    platforms = platforms.all;
+  };
+}

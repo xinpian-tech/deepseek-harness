@@ -4270,6 +4270,555 @@ export interface Config {
 ```
 <!-- END GENERATED config-catalog:@deepseek-ai/dsh-workspace-changes -->
 
+<!-- BEGIN GENERATED config-catalog:@dsh-fleet/config-generation -->
+<a id="dsh-fleetconfig-generation"></a>
+
+## `@dsh-fleet/config-generation`
+
+- `source`: [`packages/infra/config-generation/src/index.ts:28`](../packages/infra/config-generation/src/index.ts)
+
+```ts config-catalog
+/** Configuration of the ConfigGeneration record. */
+export interface Config {
+  /**
+   * Flake this process was launched from. Resolved from this field, then
+   * {@link FLAKE_URI_ENV}, then the nearest ancestor `flake.nix` of this
+   * module; without any of the three the plugin refuses to load.
+   */
+  flakeUri?: string
+  /** Absolute path of the `flake.lock` whose bytes are hashed. */
+  flakeLockPath?: string
+  /** Absolute path of the vendored llm-agents record, conventionally `<flake root>/infra/nix/vendor.json`. */
+  vendorRecordPath?: string
+  /** Harness version this deployment pinned (§8.1: production pins a release tag). */
+  harnessVersion?: string
+  /** Nix system this record describes; defaults to the running host's triple. */
+  nixSystem?: string
+}
+```
+<!-- END GENERATED config-catalog:@dsh-fleet/config-generation -->
+
+<!-- BEGIN GENERATED config-catalog:@dsh-fleet/git-checkpoint -->
+<a id="dsh-fleetgit-checkpoint"></a>
+
+## `@dsh-fleet/git-checkpoint`
+
+- `inject`: `subprocess`
+- `source`: [`packages/infra/git-checkpoint/src/index.ts:53`](../packages/infra/git-checkpoint/src/index.ts)
+
+```ts config-catalog
+/**
+ * Configuration of two-phase git archival.
+ *
+ * Every field is either a deployment-reachable choice or has one documented
+ * resolution order; none of them is a hidden default inside the operation.
+ */
+export interface Config {
+  /**
+   * Absolute path of the repository every checkpoint commits. Omission uses
+   * the stopping turn's own workspace (`session.header.cwd`), which is the
+   * repository the turn worked in.
+   */
+  repositoryRoot?: string
+  /** Remote the asynchronous push targets (default `origin`). */
+  remote?: string
+  /**
+   * Commit message template (default
+   * {@link DEFAULT_COMMIT_MESSAGE_TEMPLATE}). `{session}`, `{turn}`, and
+   * `{branch}` are replaced; the first two are required, so no checkpoint can
+   * be anonymous.
+   */
+  commitMessageTemplate?: string
+  /** First retry delay in milliseconds (default 2000), doubling per attempt. */
+  backoffBaseMs?: number
+  /** Ceiling on one retry delay in milliseconds (default 300000). */
+  backoffMaxMs?: number
+  /** Push attempts per ref before it stays queued (default 0, which retries forever). */
+  maxAttempts?: number
+  /**
+   * Absolute path of the durable push queue. Omission uses
+   * `<DSH_HOME>/push-queue/pending.tsv`, the file
+   * `infra/scripts/push-queue.sh` reads when `DSH_HOME` is set.
+   */
+  queueFile?: string
+  /**
+   * Whether `agent/turn-stopping` checkpoints a turn (default true). A disabled
+   * plugin registers no listener; the explicit push methods stay available,
+   * because a caller that invokes them asked for that work by name.
+   */
+  enabled?: boolean
+}
+```
+<!-- END GENERATED config-catalog:@dsh-fleet/git-checkpoint -->
+
+<!-- BEGIN GENERATED config-catalog:@dsh-fleet/ledger -->
+<a id="dsh-fleetledger"></a>
+
+## `@dsh-fleet/ledger`
+
+- `source`: [`packages/infra/ledger/src/index.ts:41`](../packages/infra/ledger/src/index.ts)
+
+```ts config-catalog
+/** Configuration of the performance ledger. */
+export interface Config {
+  /**
+   * Record key holding the ledger document when the storage seam is the medium
+   * (default `fleet/ledger`). It is a key, not a path: the unit name is fixed.
+   */
+  storageKey?: string
+  /**
+   * Absolute path of a ledger file. When set, the ledger is durable at that
+   * path and the storage seam is not used at all, so a deployment with no
+   * storage backend still keeps a ledger.
+   */
+  ledgerFile?: string
+  /** Registered storage backend serving the ledger unit (default `json`). */
+  storageBackend?: string
+  /**
+   * Bound on the outcome entries and scoring inputs retained per member
+   * (default 200). The newest are kept, so the aggregate a caller reads always
+   * covers the most recent record of that member.
+   */
+  maxEntries?: number
+}
+```
+<!-- END GENERATED config-catalog:@dsh-fleet/ledger -->
+
+<!-- BEGIN GENERATED config-catalog:@dsh-fleet/machine-registry -->
+<a id="dsh-fleetmachine-registry"></a>
+
+## `@dsh-fleet/machine-registry`
+
+- `source`: [`packages/infra/machine-registry/src/index.ts:27`](../packages/infra/machine-registry/src/index.ts)
+
+```ts config-catalog
+/** Configuration of the machine registry. */
+export interface Config {
+  /** Explicit machine id, for hosts whose hostid is not unique in the fleet. */
+  machineId?: string
+  /** Human alias reported by {@link MachineRegistry.current}. */
+  alias?: string
+  /** Absolute path of the durable JSON registry {@link MachineRegistry.list} reads through. */
+  registryFile?: string
+  /** Nix system override, for a host whose platform triple is not derived. */
+  nixSystem?: string
+}
+```
+<!-- END GENERATED config-catalog:@dsh-fleet/machine-registry -->
+
+<!-- BEGIN GENERATED config-catalog:@dsh-fleet/nix-mandate -->
+<a id="dsh-fleetnix-mandate"></a>
+
+## `@dsh-fleet/nix-mandate`
+
+- `inject`: `systemPrompt`
+- `source`: [`packages/infra/nix-mandate/src/index.ts:70`](../packages/infra/nix-mandate/src/index.ts)
+
+```ts config-catalog
+/** Deployment settings for the rule. Invalid values fail plugin load. */
+export interface Config {
+  /** Prompt section order (default 700). */
+  order?: number
+  /** Absolute workspace root to maintain; when omitted, each session's own working directory is used. */
+  workspaceRoot?: string
+  /** Instruction file name inside the workspace root (default `AGENTS.md`). */
+  agentsFile?: string
+  /** Whether the row registers its section, its API, and its session listener (default true). */
+  enabled?: boolean
+}
+```
+<!-- END GENERATED config-catalog:@dsh-fleet/nix-mandate -->
+
+<!-- BEGIN GENERATED config-catalog:@dsh-fleet/nix-sandbox -->
+<a id="dsh-fleetnix-sandbox"></a>
+
+## `@dsh-fleet/nix-sandbox`
+
+- `source`: [`packages/infra/nix-sandbox/src/index.ts:39`](../packages/infra/nix-sandbox/src/index.ts)
+
+```ts config-catalog
+/**
+ * Plugin configuration. Every field is optional because the schema below
+ * supplies the deployment-reachable default; a field is set only to move the
+ * profile away from that default.
+ */
+export interface Config {
+  /** Profile name carried by the resolved profile (default `nix-only`). */
+  profileName?: string
+  /** Absolute flake store path bound read-only (default `/nix/store`). */
+  storePath?: string
+  /**
+   * Extra absolute writable roots, granted to every call. The calling
+   * session's workspace root is added per call and does not belong here.
+   */
+  writableRoots?: string[]
+  /**
+   * Share the host network namespace (default `false`). Turn it on only for a
+   * call that must fetch a flake input; this is the profile's network opt-in.
+   */
+  network?: boolean
+  /**
+   * Package managers named back onto the confined PATH (default empty). Every
+   * entry is a deliberate weakening of the profile and is recorded in
+   * {@link NixSandboxProfile.allowedManagers}.
+   */
+  allowPackages?: string[]
+}
+```
+<!-- END GENERATED config-catalog:@dsh-fleet/nix-sandbox -->
+
+<!-- BEGIN GENERATED config-catalog:@dsh-fleet/nix-shell -->
+<a id="dsh-fleetnix-shell"></a>
+
+## `@dsh-fleet/nix-shell`
+
+- `refs`: [`LocalConfig`](#deepseek-aidsh-bash-local)
+- `source`: [`packages/infra/nix-shell/src/index.ts:58`](../packages/infra/nix-shell/src/index.ts)
+
+```ts config-catalog
+/**
+ * Plugin configuration: the local executor's command budgets plus the flake
+ * environment every command runs in. The sandbox policy is not here — it stays
+ * on `ctx.sandboxPolicy`, which the inherited executor applies to each call.
+ */
+export interface Config extends LocalConfig {
+  /**
+   * Flake the command's environment comes from (default `.`). A reference
+   * carrying `:` or `#` (`github:owner/repo`, `nixpkgs#hello`) is handed to nix
+   * unchecked; every other form is a path, resolved against the harness launch
+   * directory once at load and required to be a directory containing
+   * `flake.nix`. A bare registry name is therefore a load failure rather than
+   * an ambiguous reference resolved at the first command. Changing it takes a
+   * reload: the resolved value is fixed when the plugin loads.
+   */
+  flakeRef: string
+  /**
+   * nix executable (default `nix`). A bare name is looked up on `PATH`; a path
+   * is resolved against the harness launch directory. Either way the absolute
+   * result is what every command spawns, so a later `PATH` change cannot move
+   * which nix runs.
+   */
+  nixBin: string
+  /**
+   * Milliseconds added to every resolved command deadline to cover realising
+   * the flake environment (default 300000). `nix develop` may fetch or build
+   * the development environment before the command starts, and that work is
+   * charged to the same deadline the command runs under.
+   */
+  developTimeoutMs: number
+  /** Which nix subcommand supplies the environment (default `develop`). */
+  mode: NixShellMode
+  /**
+   * Extra nix arguments inserted between the flake reference and `-c`
+   * (default empty). Deployment-varying flags such as `--no-write-lock-file`
+   * belong here rather than in this package.
+   */
+  extraArgs: string[]
+}
+
+/** Which nix subcommand supplies the environment a command runs in. */
+export type NixShellMode = 'develop' | 'shell'
+```
+<!-- END GENERATED config-catalog:@dsh-fleet/nix-shell -->
+
+<!-- BEGIN GENERATED config-catalog:@dsh-fleet/prompt-source -->
+<a id="dsh-fleetprompt-source"></a>
+
+## `@dsh-fleet/prompt-source`
+
+- `source`: [`packages/infra/prompt-source/src/index.ts:65`](../packages/infra/prompt-source/src/index.ts)
+
+```ts config-catalog
+/** Configuration of the prompt-source registry. */
+export interface Config {
+  /** Source labels accepted on top of {@link BUILTIN_PROMPT_SOURCES}. */
+  extraKinds?: string[]
+  /** Label a delivery under no pending mark resolves to (default `user`). */
+  defaultSource?: string
+  /** Bound (ms) an unclaimed mark stays valid (default 300000). */
+  markTtlMs?: number
+  /** Most unclaimed marks held at once (default 1024). */
+  maxPendingMarks?: number
+  /** Events requested per durable read while answering `kindOf` (default 500). */
+  readWindow?: number
+}
+```
+<!-- END GENERATED config-catalog:@dsh-fleet/prompt-source -->
+
+<!-- BEGIN GENERATED config-catalog:@dsh-fleet/session-archive -->
+<a id="dsh-fleetsession-archive"></a>
+
+## `@dsh-fleet/session-archive`
+
+- `inject`: `subprocess` · `sessionPersistence`
+- `source`: [`packages/infra/session-archive/src/index.ts:64`](../packages/infra/session-archive/src/index.ts)
+
+```ts config-catalog
+/**
+ * Configuration of the bypass session archiver.
+ *
+ * Every field is either a deployment-reachable choice or has one documented
+ * default; none of them is a hidden default inside the operation.
+ */
+export interface Config {
+  /** Absolute path of the repository archives are committed into (the team state repository). */
+  repositoryRoot: string
+  /**
+   * MachineId this process archives under. It is the ref namespace shard
+   * (§7.2), so an empty value is a load failure: an archive without an owning
+   * machine cannot be sharded, fetched, or audited.
+   */
+  machineId: string
+  /** Ref namespace archives are published under (default `refs/dsh/machines`). */
+  refPrefix?: string
+  /**
+   * Absolute path of the archive tree. It must be inside `repositoryRoot`,
+   * because the committed path is derived from it.
+   */
+  archiveRoot: string
+  /**
+   * Whether `agent/turn-stopping` archives a session (default true). A disabled
+   * plugin registers no listener; the explicit methods stay available, because
+   * a caller that invokes them asked for that work by name.
+   */
+  enabled?: boolean
+}
+```
+<!-- END GENERATED config-catalog:@dsh-fleet/session-archive -->
+
+<!-- BEGIN GENERATED config-catalog:@dsh-fleet/subagent-tmux -->
+<a id="dsh-fleetsubagent-tmux"></a>
+
+## `@dsh-fleet/subagent-tmux`
+
+- `inject`: `subagents` · `tmux`
+- `source`: [`packages/infra/subagent-tmux/src/index.ts:60`](../packages/infra/subagent-tmux/src/index.ts)
+
+```ts config-catalog
+/** Configuration of the tmux delegation provider. */
+export interface Config {
+  /** Provider name on `ctx.subagents` (default `tmux`). */
+  providerName?: string
+  /**
+   * Session semantics for a start (default `fresh`). `resident` reuses the
+   * pane and child session keyed by the delegating session plus the task key,
+   * which is how a correction round resumes the same worker conversation.
+   */
+  sessionMode?: 'fresh' | 'resident'
+  /** Prefix of a pane key; the full key also carries the parent session and task key. */
+  paneKeyPrefix?: string
+  /** Working directory override for the pane and its child session. */
+  cwd?: string
+  /** Provider route the child runtime initializes with (default `deepseek-official`). */
+  provider?: string
+  /** Model the child runtime initializes with (default `deepseek-v4-flash`). */
+  model?: string
+  /** Optional adapter-owned reasoning effort for the child route. */
+  reasoningEffort?: string
+  /** Optional output-token cap for the child runtime. */
+  maxTokens?: number
+  /** Extra environment entries handed to the pane, on top of the pane's own allowlist. */
+  env?: Record<string, string>
+  /** Bound (ms) on pane startup and the initialize handshake (default 120000). */
+  startTimeoutMs?: number
+  /** Bound (ms) on one child turn; `0` waits indefinitely (default 0). */
+  turnTimeoutMs?: number
+  /** Grace (ms) for signaling a pane during disposal (default 5000). */
+  disposeGraceMs?: number
+}
+```
+<!-- END GENERATED config-catalog:@dsh-fleet/subagent-tmux -->
+
+<!-- BEGIN GENERATED config-catalog:@dsh-fleet/task-spec -->
+<a id="dsh-fleettask-spec"></a>
+
+## `@dsh-fleet/task-spec`
+
+- `inject`: `shell` · `subprocess`
+- `source`: [`packages/infra/task-spec/src/index.ts:46`](../packages/infra/task-spec/src/index.ts)
+
+```ts config-catalog
+/** Configuration of the task contract. */
+export interface Config {
+  /**
+   * Project test command the `nix develop -c` acceptance criterion runs when a
+   * caller passes none to {@link TaskSpecService.nixAcceptance}.
+   */
+  defaultTestCommand?: string
+  /** Deadline in milliseconds for one criterion (default 600000). */
+  defaultTimeoutMs?: number
+  /** Largest number of criteria one spec may carry (default 64). */
+  maxCriteria?: number
+  /**
+   * Absolute workspace root a `schema` criterion must stay inside. A relative
+   * value resolves against the harness launch directory once, at load; absent
+   * uses that launch directory.
+   */
+  workspaceRoot?: string
+}
+```
+<!-- END GENERATED config-catalog:@dsh-fleet/task-spec -->
+
+<!-- BEGIN GENERATED config-catalog:@dsh-fleet/tmux -->
+<a id="dsh-fleettmux"></a>
+
+## `@dsh-fleet/tmux`
+
+- `inject`: `subprocess`
+- `source`: [`packages/infra/tmux/src/index.ts:37`](../packages/infra/tmux/src/index.ts)
+
+```ts config-catalog
+/** Configuration of the tmux channel as a deployment authors it. */
+export interface Config {
+  /** tmux executable (default `tmux`). */
+  tmuxBin?: string
+  /** tmux session every fleet pane lives in (default `dsh-fleet`). */
+  sessionPrefix?: string
+  /** Harness executable a pane launches (default `dsh`). */
+  dshBin?: string
+  /** Profile the pane's harness runs (default `sdk`). */
+  profile?: string
+  /** Profile patch files handed to the pane's harness, in order. */
+  patches?: string[]
+  /** Absolute harness home for pane processes. */
+  dshHome: string
+  /**
+   * MachineId owning every pane this service places (§7.2). The fleet patch
+   * supplies the hostid; an empty value is a load failure, because a placement
+   * without an owning machine cannot be sharded or audited.
+   */
+  machineId: string
+  /**
+   * Directory holding each pane's frame log. Relative paths resolve against
+   * the harness launch directory; omission uses `<dshHome>/fleet/frames`.
+   */
+  frameRoot?: string
+  /**
+   * Credential-shaped variables copied into a pane. dsh strips these from an
+   * out-of-process child's environment, so a pane that must reach a model
+   * provider needs them restated here (§8.2).
+   */
+  credentialEnv?: string[]
+  /** Interval between frame-log polls (default 40 ms). */
+  pollIntervalMs?: number
+  /** Bound on pane creation, including the shell's own startup (default 15000 ms). */
+  startTimeoutMs?: number
+  /** Termination grace for tmux client processes (default 2000 ms). */
+  graceMs?: number
+}
+```
+<!-- END GENERATED config-catalog:@dsh-fleet/tmux -->
+
+<!-- BEGIN GENERATED config-catalog:@dsh-fleet/tmux-gateway -->
+<a id="dsh-fleettmux-gateway"></a>
+
+## `@dsh-fleet/tmux-gateway`
+
+- `source`: [`packages/infra/tmux-gateway/src/index.ts:24`](../packages/infra/tmux-gateway/src/index.ts)
+
+```ts config-catalog
+/** Configuration of the tmux gateway. */
+export interface Config {
+  /** Whether this machine serves a bridge at all (default false). */
+  enabled?: boolean
+  /**
+   * TCP port to listen on; `0` asks the kernel for a free port and the
+   * assigned one is published by {@link TmuxGateway.address} (default 0).
+   */
+  port?: number
+  /** Interface to bind (default `127.0.0.1` — see the module note on trust). */
+  host?: string
+  /** Absolute path of the tmux server socket this bridge forwards to. */
+  socketPath?: string
+  /** Bound (ms) on establishing the upstream unix-socket connection (default 5000). */
+  connectTimeoutMs?: number
+  /** Concurrent connections the bridge accepts (default 16). */
+  maxConnections?: number
+}
+```
+<!-- END GENERATED config-catalog:@dsh-fleet/tmux-gateway -->
+
+<!-- BEGIN GENERATED config-catalog:@dsh-fleet/worker-template -->
+<a id="dsh-fleetworker-template"></a>
+
+## `@dsh-fleet/worker-template`
+
+- `inject`: `tmux`
+- `source`: [`packages/infra/worker-template/src/index.ts:79`](../packages/infra/worker-template/src/index.ts)
+
+```ts config-catalog
+/** Configuration of the worker launch template. */
+export interface Config {
+  /** Profile the worker harness runs (default `sdk`). */
+  profile?: string
+  /** Absolute profile patch files handed to the worker harness, in order. */
+  patches?: string[]
+  /** Harness executable the pane execs (default `dsh`). */
+  dshBin?: string
+  /** Absolute harness home the pane runs with; the worker's sessions and state live here. */
+  dshHome: string
+  /** Credential-shaped variables forwarded explicitly, when present. */
+  credentialEnv?: string[]
+  /** Explicit name/value pairs layered over the credential allowlist. */
+  extraEnv?: Record<string, string>
+  /**
+   * Whether the launch line carries the tty setup step (default true). The
+   * composed channel's pane command always carries it, so `false` is refused
+   * at load: a pane without it echoes every frame back as corrupt output.
+   */
+  enableStty?: boolean
+  /** Bound (ms) on confirming the placed pane after the launch sequence (default 15000). */
+  startTimeoutMs?: number
+  /** Interval (ms) between confirmation checks (default 50). */
+  confirmPollMs?: number
+}
+```
+<!-- END GENERATED config-catalog:@dsh-fleet/worker-template -->
+
+<!-- BEGIN GENERATED config-catalog:@dsh-fleet/worktree -->
+<a id="dsh-fleetworktree"></a>
+
+## `@dsh-fleet/worktree`
+
+- `inject`: `subprocess`
+- `source`: [`packages/infra/worktree/src/index.ts:47`](../packages/infra/worktree/src/index.ts)
+
+```ts config-catalog
+/** Configuration of worktree isolation. */
+export interface Config {
+  /**
+   * Absolute path of the repository candidates are worktrees of. Omission uses
+   * the harness process's working directory, which is the session's workspace
+   * when the harness was launched there.
+   */
+  repositoryRoot?: string
+  /**
+   * Absolute root holding each task's candidate worktrees; default
+   * `<repositoryRoot>/.dsh-fleet/worktrees`.
+   */
+  worktreeRoot?: string
+  /** Branch namespace candidates are created under (default `fleet/candidate`). */
+  branchPrefix?: string
+  /**
+   * Whether a swept-out candidate's worktree and branch are kept (default
+   * true). §5.5 keeps them as evaluation evidence and reproduction material,
+   * and only an explicit `false` lets `prune` remove them.
+   */
+  keepLosers?: boolean
+  /**
+   * Ceiling on live candidates per task. The main agent chooses N per task, so
+   * the deployment states the bound it is willing to pay for rather than
+   * inheriting one; exceeding it refuses instead of creating another worktree.
+   */
+  maxCandidates?: number
+  /** git executable (default `git`). */
+  gitBin?: string
+  /** Termination grace for git processes (default 2000 ms). */
+  graceMs?: number
+}
+```
+<!-- END GENERATED config-catalog:@dsh-fleet/worktree -->
+
 ## Loadable plugins with no config
 
 These load from a `cordis.yml` entry with no `config:` block; they declare no configuration API.
@@ -4464,4 +5013,5 @@ Imported as libraries by other packages; a `cordis.yml` cannot load them.
 | `@deepseek-ai/dsh-util-values` | — | [`packages/util/values/src/index.ts`](../packages/util/values/src/index.ts) |
 | `@deepseek-ai/dsh-util-workspace-path` | — | [`packages/util/workspace-path/src/index.ts`](../packages/util/workspace-path/src/index.ts) |
 | `@deepseek-ai/dsh-win32-process` | — | [`packages/subprocess/win32-process/src/index.ts`](../packages/subprocess/win32-process/src/index.ts) |
+| `@dsh-fleet/bundle` | — | [`packages/bundle/fleet/src/index.ts`](../packages/bundle/fleet/src/index.ts) |
 <!-- END GENERATED config-catalog:library -->

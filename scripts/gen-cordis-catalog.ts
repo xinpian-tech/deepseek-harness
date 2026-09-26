@@ -161,6 +161,19 @@ export const SERVICE_PAGE: Record<string, string> = {
  * to a model as `cordis_runtime_inspect what:"client"`).
  */
 export const SERVICE_WALK_EXEMPTIONS: Record<string, string> = {
+  configGeneration: 'fleet ConfigGeneration record — docs/subsystems/fleet.md owns the contract',
+  gitCheckpoint: 'fleet two-phase git archival — docs/subsystems/fleet.md owns the contract',
+  ledger: 'fleet performance ledger — docs/subsystems/fleet.md owns the contract',
+  machines: 'fleet machine registry — docs/subsystems/fleet.md owns the contract',
+  nixMandate: 'fleet Nix mandate surface — docs/subsystems/fleet.md owns the contract',
+  fleetSandbox: 'fleet Nix-only sandbox profile accessor — docs/subsystems/fleet.md owns the contract',
+  promptSource: 'fleet prompt source labelling — docs/subsystems/fleet.md owns the contract',
+  sessionArchive: 'fleet session archiver — docs/subsystems/fleet.md owns the contract',
+  taskSpec: 'fleet task contract and acceptance runner — docs/subsystems/fleet.md owns the contract',
+  tmuxGateway: 'fleet cross-machine tmux bridge — docs/subsystems/fleet.md owns the contract',
+  tmux: 'fleet real-time agent channel — docs/subsystems/fleet.md owns the contract',
+  workerTemplate: 'fleet worker launch template — docs/subsystems/fleet.md owns the contract',
+  worktrees: 'fleet candidate worktrees — docs/subsystems/fleet.md owns the contract',
   invocation: 'not a service: per-call accessor (RemoteInvocation | undefined) the Gateway derives for each Remote call — packages/api/gateway/README.md owns the contract',
   webTerminals: 'client-side terminal view models — packages/api/terminal-controller/README.md owns the API',
   appReady: 'not a service: launcher-provided successful-startup signal — packages/boot/cmdline/README.md owns the launcher contract',

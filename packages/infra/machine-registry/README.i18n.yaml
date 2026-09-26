@@ -1,0 +1,76 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/infra/machine-registry/README.md
+/:
+  en: 4688438a596db97e
+  zh: e6bc134e5b6e2b52
+/dsh-fleet-machine-registry:
+  en: 03e7c3d8957eb3ef
+  zh: ff23dfade89146e2
+/dsh-fleet-machine-registry/summary:
+  en: 0ba6d05c6b19a335
+  zh: 3ef35a7749af91f6
+/dsh-fleet-machine-registry/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/dsh-fleet-machine-registry/use-this-package:
+  en: c086d9e3e9d8e6c7
+  zh: b7b4595b26c616cc
+/dsh-fleet-machine-registry/use-this-package/when-to-use-it:
+  en: 3b85d84e993469fd
+  zh: 38ca84d738428c2c
+/dsh-fleet-machine-registry/use-this-package/configuration:
+  en: b600548848f259e4
+  zh: 45e72023e819a57c
+/dsh-fleet-machine-registry/use-this-package/machine-id-resolution:
+  en: 7e16298221a59f75
+  zh: 38b24abcae92977d
+/dsh-fleet-machine-registry/use-this-package/nix-system-resolution:
+  en: bb012c6c06e7f71b
+  zh: e8f374b2bbdb9b64
+/dsh-fleet-machine-registry/use-this-package/what-you-get:
+  en: 78e72d5c8bed335d
+  zh: fc7f50293a3f07fd
+/dsh-fleet-machine-registry/use-this-package/registry-file:
+  en: 945cbcc52f35bbbf
+  zh: a545f48cf0764690
+/dsh-fleet-machine-registry/use-this-package/failures-and-recovery:
+  en: 5d9b47dcb0059c4f
+  zh: 7d32d67cbbe6eee8
+/dsh-fleet-machine-registry/understand-the-implementation:
+  en: 42b15ac6321706aa
+  zh: 7ae097f3abcc5d9c
+/dsh-fleet-machine-registry/understand-the-implementation/design-concept:
+  en: 9c73d2601e15efc6
+  zh: 8e47ae101d0c0808
+/dsh-fleet-machine-registry/understand-the-implementation/source-map:
+  en: 7021160a00b40093
+  zh: 8da697a4e20d6470
+/dsh-fleet-machine-registry/understand-the-implementation/identity-resolution:
+  en: e1b6b9055d390df5
+  zh: d5271ddfb56f9d5c
+/dsh-fleet-machine-registry/further-exploration:
+  en: 1b31c2dd96eaa294
+  zh: 636b6f68563587b6
+/dsh-fleet-machine-registry/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/dsh-fleet-machine-registry/model-experience/machine-identity-registration:
+  en: 0d8650b0a7ef97bb
+  zh: cce0190f957c3f2d
+/dsh-fleet-machine-registry/model-experience/machine-identity-registration/what-the-model-sees:
+  en: 758a204653ddf0f4
+  zh: 6354e5f3a4d48ca0
+/dsh-fleet-machine-registry/model-experience/machine-identity-registration/token-effect:
+  en: 5b83ac7ce1ea1346
+  zh: 46f65ccddd9d3ff1
+/dsh-fleet-machine-registry/model-experience/machine-identity-registration/kv-cache-effect:
+  en: 261426e4850e3ac5
+  zh: b925d7ed4bd8310b
+/dsh-fleet-machine-registry/known-limitations-and-deferred-work:
+  en: e3b10099aacee77c
+  zh: 46d539c94058fc48
+/dsh-fleet-machine-registry/known-limitations-and-deferred-work/dev-note:
+  en: 5eb3793298f76dcf
+  zh: 9615c27b69af1343

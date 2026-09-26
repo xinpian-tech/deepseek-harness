@@ -1,0 +1,64 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/bundle/fleet/README.md
+/:
+  en: 16a9d95870867264
+  zh: 592e090230f5befe
+/dsh-fleet-bundle:
+  en: 383f496fd545cc31
+  zh: 43ec1ae21e0dec82
+/dsh-fleet-bundle/summary:
+  en: abfffd1c04a9466f
+  zh: 2a478ec62089c2b1
+/dsh-fleet-bundle/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: ffab54373e9e61f0
+/dsh-fleet-bundle/use-this-package:
+  en: bbff250eba0f1b89
+  zh: bbff250eba0f1b89
+/dsh-fleet-bundle/use-this-package/where-the-layers-come-from:
+  en: 13bd8ed718ceae18
+  zh: 6953ab697d4a9374
+/dsh-fleet-bundle/use-this-package/what-you-get:
+  en: 2a1a489294093cf2
+  zh: 4df89edcec13ae0b
+/dsh-fleet-bundle/understand-the-implementation:
+  en: 42b15ac6321706aa
+  zh: 56f167e970dfe0c6
+/dsh-fleet-bundle/understand-the-implementation/the-removal-layer:
+  en: 8be144b77db0a131
+  zh: 7781dc5ad795cfd0
+/dsh-fleet-bundle/understand-the-implementation/the-repointed-rows:
+  en: 1a456c4d1c140bce
+  zh: 4139810e5831c2c8
+/dsh-fleet-bundle/understand-the-implementation/the-composition-layer:
+  en: 6fb3cf63836bbe23
+  zh: e496a3481d73899f
+/dsh-fleet-bundle/understand-the-implementation/source-map:
+  en: 281e25993c9c66ab
+  zh: dbf6129422157be1
+/dsh-fleet-bundle/further-exploration:
+  en: bdd9fec3c86cd3d3
+  zh: 852ca0d8e4c0900a
+/dsh-fleet-bundle/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/dsh-fleet-bundle/model-experience/fleet-tool-set:
+  en: b24804cdf7a3404e
+  zh: b24804cdf7a3404e
+/dsh-fleet-bundle/model-experience/fleet-tool-set/what-the-model-sees:
+  en: 7bc35dd6e911e3eb
+  zh: 748196e2e9e00879
+/dsh-fleet-bundle/model-experience/fleet-tool-set/token-effect:
+  en: 7960740e4564d203
+  zh: 3da371e566c78780
+/dsh-fleet-bundle/model-experience/fleet-tool-set/kv-cache-effect:
+  en: 266f1d6a27fc4707
+  zh: 85975d76a8b48518
+/dsh-fleet-bundle/known-limitations-and-deferred-work:
+  en: ab5b6042ddb66a06
+  zh: 5b9cc095f3904f0c
+/dsh-fleet-bundle/known-limitations-and-deferred-work/dev-note:
+  en: e67f633dc6fe7773
+  zh: 27b3d680ef2a4476

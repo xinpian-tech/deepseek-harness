@@ -1,0 +1,25 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/infra/README.md
+/:
+  en: f55f04a60faa7101
+  zh: a6c340592a41d51e
+/infra-the-fleet-composition:
+  en: 11e6c8d6c9e0f3af
+  zh: 2c4cd21fb1eaaddf
+/infra-the-fleet-composition/summary:
+  en: 7b4c04295d374456
+  zh: 6ad07e2c57b4028f
+/infra-the-fleet-composition/table-of-contents:
+  en: 1eb35b015a6c423f
+  zh: 5b78a1325d3533ef
+/infra-the-fleet-composition/packages:
+  en: 1e071de62b50fd7a
+  zh: 67abad74f68bf518
+/infra-the-fleet-composition/related-documentation:
+  en: bd66024e709d81cb
+  zh: eefdcb30d0d8ddc8
+/infra-the-fleet-composition/dev-note:
+  en: 5de1d6304e00c58f
+  zh: dc1245c4ab7a002b

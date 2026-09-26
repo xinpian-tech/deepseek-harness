@@ -1,0 +1,70 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/infra/worktree/README.md
+/:
+  en: e4298d98e8d1610b
+  zh: d05c481de5d35ac4
+/dsh-fleet-worktree:
+  en: ae3b954b9c093b78
+  zh: 05130d9eb84aa399
+/dsh-fleet-worktree/summary:
+  en: 67927a4b36a116c1
+  zh: 81085a7882ba4700
+/dsh-fleet-worktree/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/dsh-fleet-worktree/use-this-package:
+  en: 809437fa402a0490
+  zh: 39b88fcc25455c18
+/dsh-fleet-worktree/use-this-package/configuration:
+  en: 3fad79c53a4e7a07
+  zh: 0cf9e539c7d4bf60
+/dsh-fleet-worktree/use-this-package/what-you-get:
+  en: e16afae48b7057c2
+  zh: 00478099d393894c
+/dsh-fleet-worktree/use-this-package/branch-naming:
+  en: 1d1a77d56a06a80f
+  zh: cc77b9866c3adede
+/dsh-fleet-worktree/use-this-package/failure-and-recovery:
+  en: 5443dc91efec36fa
+  zh: 6e43d892617c15f8
+/dsh-fleet-worktree/understand-the-implementation:
+  en: 42b15ac6321706aa
+  zh: c5500056b41ce570
+/dsh-fleet-worktree/understand-the-implementation/design-concept:
+  en: 4181be8f565223be
+  zh: f1eefe02732f5c87
+/dsh-fleet-worktree/understand-the-implementation/source-map:
+  en: e4fd190a7b437490
+  zh: 06ec58756dbd3075
+/dsh-fleet-worktree/understand-the-implementation/durable-state:
+  en: 45d1db73a67d07cb
+  zh: 1f7ce2740e9b216b
+/dsh-fleet-worktree/understand-the-implementation/git-operations:
+  en: f4bff62065e3844b
+  zh: e168e8b9b48eae78
+/dsh-fleet-worktree/further-exploration:
+  en: 0f17b2a54d57f882
+  zh: 5078f0662bd120e9
+/dsh-fleet-worktree/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/dsh-fleet-worktree/model-experience/worktree-bookkeeping:
+  en: 0cbb14ca97ae71de
+  zh: bf99152a8c99c6f2
+/dsh-fleet-worktree/model-experience/worktree-bookkeeping/what-the-model-sees:
+  en: e4dc769d527b526e
+  zh: 4ec28b41f608c6d4
+/dsh-fleet-worktree/model-experience/worktree-bookkeeping/token-effect:
+  en: 4ea60af2ad59bca1
+  zh: f840b8bd3fd4c76b
+/dsh-fleet-worktree/model-experience/worktree-bookkeeping/kv-cache-effect:
+  en: 42fe67643e820d17
+  zh: bff8be55deee8a7c
+/dsh-fleet-worktree/known-limitations-and-deferred-work:
+  en: 44adfae363dc811a
+  zh: a326cf21c1f15d7a
+/dsh-fleet-worktree/known-limitations-and-deferred-work/dev-note:
+  en: fd69417985631600
+  zh: cd8895fb866e84d9

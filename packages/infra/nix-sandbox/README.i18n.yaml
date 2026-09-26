@@ -1,0 +1,76 @@
+# Bilingual-pair consistency record for README.md (docs/i18n/README.md): per heading
+# section, a hash of its English and Chinese blocks outside code blocks and generated regions.
+# After editing either side, bring the other along and re-record with:
+#   pnpm run verify-translation-pairing --write packages/infra/nix-sandbox/README.md
+/:
+  en: 3e8d9efd5ca4ed5a
+  zh: 049320a5437d95e8
+/dsh-fleet-nix-sandbox:
+  en: d615ec40c515f4a6
+  zh: 003b39837e77a3a1
+/dsh-fleet-nix-sandbox/summary:
+  en: 23e2cba45f127bba
+  zh: 0235a9aebd093431
+/dsh-fleet-nix-sandbox/table-of-contents:
+  en: d152484eb41ac6b4
+  zh: 09388d293f9be9cb
+/dsh-fleet-nix-sandbox/use-this-package:
+  en: 89c7d5994a13e0b6
+  zh: 99cefe2a9049ee91
+/dsh-fleet-nix-sandbox/use-this-package/when-to-choose-it:
+  en: b4cfd5beef466260
+  zh: 8de009244b73b376
+/dsh-fleet-nix-sandbox/use-this-package/minimal-configuration:
+  en: c57a274c6b5f27ff
+  zh: b3e9b2c1ff3d5509
+/dsh-fleet-nix-sandbox/use-this-package/what-the-confined-process-sees:
+  en: e2ffeccb812792f2
+  zh: 731718385d1e469d
+/dsh-fleet-nix-sandbox/use-this-package/reading-the-effective-profile:
+  en: 207e417c04e2b0c8
+  zh: f1e68a2e958cfa39
+/dsh-fleet-nix-sandbox/use-this-package/failures-and-recovery:
+  en: ecbfa76945f6842a
+  zh: 03a48baa1292d5d4
+/dsh-fleet-nix-sandbox/understand-the-implementation:
+  en: 33d8f5cd9c4fb206
+  zh: c13deb1a5ad579df
+/dsh-fleet-nix-sandbox/understand-the-implementation/the-extension-point-and-the-part-the-seam-cannot-express:
+  en: 5647b47aad7c0f10
+  zh: 4532e7746f964447
+/dsh-fleet-nix-sandbox/understand-the-implementation/profile-derivation:
+  en: 8e50efd2442dd2b5
+  zh: 0a4c73045b8c54e1
+/dsh-fleet-nix-sandbox/understand-the-implementation/runner-argv:
+  en: 8b34e9ace43a1b94
+  zh: 947dcddd5287db8c
+/dsh-fleet-nix-sandbox/understand-the-implementation/availability-probe:
+  en: 71f97ef1a0b8206e
+  zh: 191388e3ff3d76ca
+/dsh-fleet-nix-sandbox/understand-the-implementation/source-map:
+  en: e284cb23e4c393a1
+  zh: 027bc5bb6d3bd7e4
+/dsh-fleet-nix-sandbox/further-exploration:
+  en: 774115541127353f
+  zh: 6fb77e69acd761f3
+/dsh-fleet-nix-sandbox/model-experience:
+  en: 215e7ba838619b7b
+  zh: a311da3843709f90
+/dsh-fleet-nix-sandbox/model-experience/confinement-outcome-indirectly:
+  en: ce2e87ebce7ceb09
+  zh: 20c8c6cda79b5bc6
+/dsh-fleet-nix-sandbox/model-experience/confinement-outcome-indirectly/what-the-model-sees:
+  en: 29408146a2161579
+  zh: 2dacedb4dc556f58
+/dsh-fleet-nix-sandbox/model-experience/confinement-outcome-indirectly/token-effect:
+  en: a0353e899ae30c83
+  zh: 63e1db2516006872
+/dsh-fleet-nix-sandbox/model-experience/confinement-outcome-indirectly/kv-cache-effect:
+  en: a230f292a351bb11
+  zh: 8c6f8926995cdef6
+/dsh-fleet-nix-sandbox/known-limitations-and-deferred-work:
+  en: da7aaeba9acc8631
+  zh: 525be992c9de9f76
+/dsh-fleet-nix-sandbox/known-limitations-and-deferred-work/dev-note:
+  en: 643122fceb1ab85b
+  zh: c1fd47a4bbef97f3

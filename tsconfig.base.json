@@ -331,6 +331,27 @@
       "@deepseek-ai/dsh-compaction-image-offload/projection": ["./packages/compaction/compaction-image-offload/src/projection.ts"],
       "@deepseek-ai/dsh-session-format-catalog/message-projections": ["./packages/session/session-format-catalog/src/message-projections.ts"],
       "@deepseek-ai/dsh-native-command/types": ["./packages/util/native-command/src/types.ts"],
+      // Fleet packages (packages/infra/*). Hand-written because the generated
+      // region below covers only the `@deepseek-ai/dsh-*` namespace, keyed by
+      // directory name; the fleet uses its own namespace so a fleet plugin is
+      // never confused with a harness plugin. Without these mappings a
+      // `tsx` source launch would resolve the fleet rows to unbuilt `lib/`
+      // output, and the profile composition could not boot from source.
+      "@dsh-fleet/config-generation": ["./packages/infra/config-generation/src"],
+      "@dsh-fleet/git-checkpoint": ["./packages/infra/git-checkpoint/src"],
+      "@dsh-fleet/ledger": ["./packages/infra/ledger/src"],
+      "@dsh-fleet/machine-registry": ["./packages/infra/machine-registry/src"],
+      "@dsh-fleet/nix-mandate": ["./packages/infra/nix-mandate/src"],
+      "@dsh-fleet/nix-sandbox": ["./packages/infra/nix-sandbox/src"],
+      "@dsh-fleet/nix-shell": ["./packages/infra/nix-shell/src"],
+      "@dsh-fleet/prompt-source": ["./packages/infra/prompt-source/src"],
+      "@dsh-fleet/session-archive": ["./packages/infra/session-archive/src"],
+      "@dsh-fleet/subagent-tmux": ["./packages/infra/subagent-tmux/src"],
+      "@dsh-fleet/task-spec": ["./packages/infra/task-spec/src"],
+      "@dsh-fleet/tmux": ["./packages/infra/tmux/src"],
+      "@dsh-fleet/tmux-gateway": ["./packages/infra/tmux-gateway/src"],
+      "@dsh-fleet/worker-template": ["./packages/infra/worker-template/src"],
+      "@dsh-fleet/worktree": ["./packages/infra/worktree/src"],
       // BEGIN generated package aliases — pnpm run gen-tsconfig-paths
       "@deepseek-ai/dsh-acp": ["./packages/acp/acp/src"],
       "@deepseek-ai/dsh-acp-app": ["./packages/bundle/acp-app/src"],

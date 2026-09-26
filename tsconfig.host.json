@@ -467,6 +467,26 @@
     { "path": "./packages/lsp/lsp" },
     { "path": "./packages/lsp/lsp-stdio" },
     { "path": "./packages/lsp/tool-lsp" },
+
+    // The fleet packages. Each is a workspace member whose tests the include
+    // globs above reach, so they belong to this program like every other
+    // package; `packages/bundle/fleet` carries the composition patch layers.
+    { "path": "./packages/infra/config-generation" },
+    { "path": "./packages/infra/git-checkpoint" },
+    { "path": "./packages/infra/ledger" },
+    { "path": "./packages/infra/machine-registry" },
+    { "path": "./packages/infra/nix-mandate" },
+    { "path": "./packages/infra/nix-sandbox" },
+    { "path": "./packages/infra/nix-shell" },
+    { "path": "./packages/infra/prompt-source" },
+    { "path": "./packages/infra/session-archive" },
+    { "path": "./packages/infra/subagent-tmux" },
+    { "path": "./packages/infra/task-spec" },
+    { "path": "./packages/infra/tmux" },
+    { "path": "./packages/infra/tmux-gateway" },
+    { "path": "./packages/infra/worker-template" },
+    { "path": "./packages/infra/worktree" },
+    { "path": "./packages/bundle/fleet" },
     { "path": "./apps/cli" },
     { "path": "./apps/desktop-host" },
     { "path": "./apps/desktop/tsconfig.host.json" }
